@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обучение вождению и профессиональное образование | ИП Щучка А. Г.</title>
+    <title>Автошкола «Ре-Старт» | Обучение вождению категории B</title>
     <style>
         :root {
-            --primary-color: #1e3a8a;
-            --accent-color: #2563eb;
-            --hover-color: #1d4ed8;
-            --text-color: #1f2937;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
+            --primary-blue: #002b49;
+            --accent-orange: #ff6600;
+            --hover-orange: #e05500;
+            --bg-light: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -21,22 +23,27 @@
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            color: var(--text-color);
+            color: var(--text-dark);
             background-color: var(--bg-light);
             line-height: 1.6;
         }
 
+        /* Хедер и логотип */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -45,103 +52,214 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            height: 85px;
         }
 
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-color);
+        .logo-block {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
         nav a {
-            margin-left: 20px;
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.2s;
         }
 
         nav a:hover {
-            color: var(--accent-color);
+            color: var(--accent-orange);
         }
 
+        .btn-header {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.2s;
+        }
+
+        .btn-header:hover {
+            background-color: var(--hover-orange);
+        }
+
+        /* Первый экран (Hero) */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.88), rgba(30, 58, 138, 0.88)), 
+            background: linear-gradient(135deg, rgba(0, 43, 73, 0.92), rgba(0, 43, 73, 0.85)), 
                         url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1350&q=80') center/cover;
-            color: var(--white);
-            padding: 90px 0;
-            text-align: center;
+            color: white;
+            padding: 90px 0 100px;
+        }
+
+        .hero-content {
+            max-width: 750px;
         }
 
         .hero h1 {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.25;
             margin-bottom: 20px;
-            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 750px;
-            margin: 0 auto 30px;
-            opacity: 0.95;
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 35px;
         }
 
-        .btn {
+        .btn-main {
             display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 14px 32px;
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 15px 35px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.2s, transform 0.1s;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.2s;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
         }
 
-        .btn:hover {
-            background-color: var(--hover-color);
+        .btn-main:hover {
+            background-color: var(--hover-orange);
+            transform: translateY(-2px);
         }
 
-        section {
-            padding: 60px 0;
+        /* Секция Преимущества */
+        .section-padding {
+            padding: 70px 0;
         }
 
         .section-title {
-            text-align: center;
             font-size: 2rem;
-            color: var(--primary-color);
+            font-weight: 800;
+            color: var(--primary-blue);
             margin-bottom: 40px;
-            font-weight: 700;
+            text-align: left;
         }
 
-        .grid {
+        .advantages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
-        .card {
-            background-color: var(--white);
+        .adv-card {
+            background-color: var(--card-bg);
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border-left: 5px solid var(--accent-orange);
         }
 
-        .card h3 {
+        .adv-icon {
+            font-size: 2rem;
             margin-bottom: 15px;
-            color: var(--primary-color);
-            font-size: 1.25rem;
         }
 
-        .requisites {
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        .adv-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .adv-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Секция Курсы */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .course-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .course-body h3 {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .course-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            text-align: center;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        /* Официальные сведения (Реквизиты) */
+        .official-section {
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-wrap {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
         }
 
         .req-table {
@@ -149,29 +267,42 @@
             border-collapse: collapse;
         }
 
-        .req-table tr:nth-child(even) {
-            background-color: #f8fafc;
+        .req-table th {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: left;
+            padding: 15px 20px;
+            font-size: 1.1rem;
         }
 
         .req-table td {
-            padding: 12px;
-            border-bottom: 1px solid #e5e7eb;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-color);
             font-size: 0.95rem;
         }
 
-        .req-table td:first-child {
-            font-weight: 600;
-            width: 38%;
-            color: #4b5563;
+        .req-table tr:last-child td {
+            border-bottom: none;
         }
 
-        .contact-form {
-            background-color: var(--white);
+        .req-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-blue);
+            width: 35%;
+        }
+
+        /* Блок Контактов и Формы */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .form-card {
+            background-color: var(--card-bg);
             padding: 35px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         .form-group {
@@ -185,192 +316,308 @@
             font-size: 0.95rem;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #d1d5db;
+            border: 1px solid var(--border-color);
             border-radius: 6px;
             font-size: 1rem;
             outline: none;
-            transition: border-color 0.2s;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--accent-color);
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent-orange);
         }
 
-        .contact-info-block {
-            text-align: center;
-            margin-bottom: 30px;
+        .location-card {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .contact-info-block a {
-            color: var(--accent-color);
+        .location-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item strong {
+            display: block;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .info-item a {
+            color: white;
             text-decoration: none;
             font-weight: 600;
         }
 
+        /* Футер */
         footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 25px 0;
-            font-size: 0.9rem;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 35px 0;
+            border-top: 3px solid var(--accent-orange);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            .nav-wrap { flex-direction: column; height: auto; padding: 15px 0; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; }
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 45px;
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 700;
+            background-color: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-orange);
+        }
+
+        /* Адаптивность для смартфонов */
+        @media (max-width: 850px) {
+            .nav-wrap { flex-direction: column; height: auto; padding: 20px 0; gap: 15px; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .hero h1 { font-size: 1.9rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-wrap { flex-direction: column; gap: 20px; text-align: center; }
             .req-table td { display: block; width: 100%; }
             .req-table td:first-child { border-bottom: none; padding-bottom: 2px; }
-            .req-table td:last-child { padding-top: 2px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Шапка сайта -->
+    <!-- Шапка -->
     <header>
         <div class="container nav-wrap">
-            <div class="logo">ИП Щучка А. Г.</div>
+            <a href="#" class="logo-block">
+                <img src="logo.jpg" alt="Автошкола Ре-Старт" class="logo-img">
+            </a>
             <nav>
-                <a href="#services">Услуги</a>
+                <a href="#about">Преимущества</a>
+                <a href="#courses">Программы</a>
                 <a href="#requisites">Реквизиты</a>
                 <a href="#contact">Контакты</a>
             </nav>
+            <a href="#contact" class="btn-header">Записаться</a>
         </div>
     </header>
 
-    <!-- Баннер -->
+    <!-- Первый экран -->
     <section class="hero">
         <div class="container">
-            <h1>Подготовка водителей и профессиональное образование</h1>
-            <p>Обучение вождению автотранспортных средств и программы дополнительного профессионального образования в Тюменской области.</p>
-            <a href="#contact" class="btn">Записаться на курс</a>
+            <div class="hero-content">
+                <h1>Ваш новый старт на дорогах: подготовка водителей категории B</h1>
+                <p>Автошкола ИП Щучка А. Г. — профессиональное обучение вождению и восстановление практических навыков в Тюменской области (с. Большое Сорокино).</p>
+                <a href="#contact" class="btn-main">Узнать стоимость</a>
+            </div>
         </div>
     </section>
 
-    <!-- Раздел услуг -->
-    <section id="services">
+    <!-- Преимущества -->
+    <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Виды деятельности</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Подготовка водителей</h3>
-                    <p>Деятельность школ подготовки водителей автотранспортных средств (ОКВЭД 85.42.1). Изучение правил дорожного движения, подготовка к экзаменам и практические занятия.</p>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages-grid">
+                <div class="adv-card">
+                    <div class="adv-icon">👨‍🏫</div>
+                    <h3>Опытные инструкторы</h3>
+                    <p>Индивидуальный подход к каждому ученику, спокойная и уверенная атмосфера на всех этапах обучения.</p>
                 </div>
-                <div class="card">
-                    <h3>Профессиональное образование</h3>
-                    <p>Образование профессиональное дополнительное (ОКВЭД 85.42). Программы повышения квалификации и переподготовки кадров.</p>
+                <div class="adv-card">
+                    <div class="adv-icon">🚗</div>
+                    <h3>Собственный автодром</h3>
+                    <p>Оборудованная площадка для отработки всех необходимых упражнений перед выездом в город.</p>
                 </div>
-                <div class="card">
-                    <h3>Индивидуальные программы</h3>
-                    <p>Персональные консультации, восстановление навыков управления транспортным средством и разбор сложных дорожных сценариев.</p>
+                <div class="adv-card">
+                    <div class="adv-icon">📅</div>
+                    <h3>Гибкий график</h3>
+                    <p>Удобное время проведения теоретических и практических занятий под ваш рабочий или учебный график.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Сведения и реквизиты -->
-    <section id="requisites" style="background-color: #f1f5f9;">
+    <!-- Курсы -->
+    <section id="courses" class="section-padding" style="background-color: #ffffff;">
         <div class="container">
-            <h2 class="section-title">Официальные сведения и реквизиты</h2>
-            <div class="requisites">
+            <h2 class="section-title">Наши программы вождения</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-img" style="background-image: url('https://irecommend.ru/sites/default/files/product-images/197227/92cf222adccb031fe5f581b0bdf7f9e7.jpeg');"></div>
+                    <div class="course-body">
+                        <h3>Подготовка водителей (Категория B)</h3>
+                        <p>Полный теоретический курс ПДД, подготовка к сдаче экзаменов в ГИБДД и уроки практического вождения на автодроме и в городе (ОКВЭД 85.42.1).</p>
+                        <a href="#contact" class="btn-outline">Узнать подробнее</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="course-body">
+                        <h3>Восстановление навыков вождения</h3>
+                        <p>Индивидуальные занятия с инструктором для тех, у кого уже есть водительское удостоверение, но требуется вернуть уверенность за рулем.</p>
+                        <a href="#contact" class="btn-outline">Узнать подробнее</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="course-body">
+                        <h3>Подготовка к экзаменам в ГИБДД</h3>
+                        <p>Интенсивная проработка теоретических билетов ПДД и маршрутов сдачи практического экзамена.</p>
+                        <a href="#contact" class="btn-outline">Узнать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Официальная информация -->
+    <section id="requisites" class="section-padding official-section">
+        <div class="container">
+            <h2 class="section-title">Официальная информация (ИП Щучка А. Г.)</h2>
+            <div class="table-wrap">
                 <table class="req-table">
-                    <tr>
-                        <td>Полное наименование:</td>
-                        <td>Индивидуальный предприниматель Щучка Алексей Григорьевич</td>
-                    </tr>
-                    <tr>
-                        <td>ОГРНИП:</td>
-                        <td>326723200041412 (от 15.04.2026)</td>
-                    </tr>
-                    <tr>
-                        <td>ИНН:</td>
-                        <td>720801856980</td>
-                    </tr>
-                    <tr>
-                        <td>Основной вид деятельности:</td>
-                        <td>85.42 Образование профессиональное дополнительное</td>
-                    </tr>
-                    <tr>
-                        <td>Дополнительный вид деятельности:</td>
-                        <td>85.42.1 Деятельность школ подготовки водителей автотранспортных средств</td>
-                    </tr>
-                    <tr>
-                        <td>Регистратор:</td>
-                        <td>Межрайонная инспекция ФНС № 14 по Тюменской области</td>
-                    </tr>
-                    <tr>
-                        <td>Налоговый орган:</td>
-                        <td>Межрайонная инспекция ФНС России № 6 по Тюменской области</td>
-                    </tr>
-                    <tr>
-                        <td>Адрес:</td>
-                        <td>Тюменская область, Сорокинский район, село Большое Сорокино</td>
-                    </tr>
-                    <tr>
-                        <td>Система налогообложения:</td>
-                        <td>УСН (Упрощенная система налогообложения)</td>
-                    </tr>
-                    <tr>
-                        <td>Категория субъекта:</td>
-                        <td>Микропредприятие (в реестре МСП с 10.05.2026)</td>
-                    </tr>
-                    <tr>
-                        <td>Электронная почта:</td>
-                        <td><a href="mailto:ilya_alekseevich123@mail.ru" style="color: var(--accent-color); font-weight: 600;">ilya_alekseevich123@mail.ru</a></td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Ре-Старт: Прозрачность и Доверие</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Полное наименование:</td>
+                            <td>Индивидуальный предприниматель Щучка Алексей Григорьевич</td>
+                        </tr>
+                        <tr>
+                            <td>ОГРНИП:</td>
+                            <td>326723200041412 (от 15.04.2026)</td>
+                        </tr>
+                        <tr>
+                            <td>ИНН:</td>
+                            <td>720801856980</td>
+                        </tr>
+                        <tr>
+                            <td>Деятельность:</td>
+                            <td>85.42.1 Деятельность школ подготовки водителей автотранспортных средств</td>
+                        </tr>
+                        <tr>
+                            <td>Адрес регистрации:</td>
+                            <td>Тюменская область, Сорокинский район, село Большое Сорокино</td>
+                        </tr>
+                        <tr>
+                            <td>Налоговый орган:</td>
+                            <td>Межрайонная инспекция ФНС России № 6 по Тюменской области</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </section>
 
-    <!-- Форма заявки -->
-    <section id="contact">
+    <!-- Форма и Контакты -->
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Оставить заявку</h2>
+            <h2 class="section-title">Запись на обучение</h2>
+            <div class="contact-grid">
+                
+                <!-- Форма отправки -->
+                <div class="form-card">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c1634d1f-f2e6-462e-a952-29b9d3cb3cec">
+                        <input type="hidden" name="subject" value="Заявка с сайта Автошкола Ре-Старт">
+                        <input type="hidden" name="from_name" value="Автошкола Ре-Старт">
 
-            <div class="contact-info-block">
-                <p>Вы можете отправить нам сообщение через форму ниже или написать на почту: 
-                   <a href="mailto:ilya_alekseevich123@mail.ru">ilya_alekseevich123@mail.ru</a>
-                </p>
-            </div>
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" name="Имя" id="name" required placeholder="Иван Иванов">
+                        </div>
 
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Секретный ключ Web3Forms -->
-                    <input type="hidden" name="access_key" value="c1634d1f-f2e6-462e-a952-29b9d3cb3cec">
-                    <input type="hidden" name="subject" value="Новая заявка с сайта ИП Щучка А. Г.">
-                    <input type="hidden" name="from_name" value="Сайт ИП Щучка А. Г.">
+                        <div class="form-group">
+                            <label for="phone">Номер телефона *</label>
+                            <input type="tel" name="Телефон" id="phone" required placeholder="+7 (___) ___-__-__">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="name">Ваше имя *</label>
-                        <input type="text" name="Имя" id="name" required placeholder="Иван Иванов">
+                        <div class="form-group">
+                            <label for="course">Интересующая программа</label>
+                            <select name="Курс" id="course">
+                                <option value="Категория B">Подготовка водителей (Категория B)</option>
+                                <option value="Восстановление навыков">Восстановление навыков вождения</option>
+                                <option value="Подготовка к ГИБДД">Подготовка к экзаменам в ГИБДД</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Сообщение или вопрос</label>
+                            <textarea name="Сообщение" id="message" rows="3" placeholder="Напишите ваш вопрос..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-main" style="width: 100%;">Отправить заявку</button>
+                    </form>
+                </div>
+
+                <!-- Контактный блок -->
+                <div class="location-card">
+                    <div>
+                        <h3>Контакты и Адрес</h3>
+                        <div class="info-item">
+                            <strong>Адрес обучения:</strong>
+                            <p>Тюменская область, Сорокинский район, с. Большое Сорокино</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Электронная почта:</strong>
+                            <p><a href="mailto:ilya_alekseevich123@mail.ru">ilya_alekseevich123@mail.ru</a></p>
+                        </div>
+                        <div class="info-item">
+                            <strong>График работы:</strong>
+                            <p>Пн — Пт: с 09:00 до 18:00</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone">Номер телефона *</label>
-                        <input type="tel" name="Телефон" id="phone" required placeholder="+7 (900) 000-00-00">
+                    <div style="font-size: 0.85rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; margin-top: 20px;">
+                        Официальный сайт автошколы «Ре-Старт» ИП Щучка А. Г.
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="message">Интересующая программа или вопрос</label>
-                        <textarea name="Сообщение" id="message" rows="4" placeholder="Укажите интересующую категорию или вопрос..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
-                </form>
             </div>
         </div>
     </section>
 
     <!-- Подвал -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 ИП Щучка Алексей Григорьевич. ОГРНИП 326723200041412. Все права защищены.</p>
+        <div class="container footer-wrap">
+            <div>
+                <img src="logo.jpg" alt="Ре-Старт" class="footer-logo">
+                <p>&copy; 2026 ИП Щучка Алексей Григорьевич. ОГРНИП 326723200041412.</p>
+            </div>
+            <div class="social-links">
+                <a href="#">ВКонтакте</a>
+                <a href="#">Telegram</a>
+            </div>
         </div>
     </footer>
 
