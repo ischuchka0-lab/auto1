@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автошкола «Ре-Старт» | Обучение вождению категории B в Большом Сорокино</title>
-    <meta name="description" content="Официальный сайт автошколы «Ре-Старт» ИП Щучка А. Г. в с. Большое Сорокино. Обучение вождению категории B, собственный автодром 3011 м², подготовка к ГИБДД, рассрочка 0%.">
+    <title>Автошкола «Ре-Старт» | Обучение вождению категории B в Большом Сорокино — 55 000 ₽ Всё включено</title>
+    <meta name="description" content="Официальный сайт автошколы «Ре-Старт» ИП Щучка А. Г. в с. Большое Сорокино. Обучение вождению категории B за 55 000 ₽ единым платежом всё включено. Собственный автодром 3 011 м², лицензированная база.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,8 @@
                             dark: '#071626',
                             navy: '#0b2038',
                             surface: '#112c4e',
-                            orange: '#ff6200',
-                            orangeHover: '#ea5500',
+                            orange: '#ff6600',
+                            orangeHover: '#e05500',
                             orangeLight: '#fff2ea',
                             accent: '#ff8833',
                             grayBg: '#f8fafc',
@@ -38,7 +38,7 @@
                         display: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     boxShadow: {
-                        'glow': '0 0 35px -5px rgba(255, 98, 0, 0.35)',
+                        'glow': '0 0 35px -5px rgba(255, 102, 0, 0.35)',
                         'glow-blue': '0 0 35px -5px rgba(11, 32, 56, 0.45)',
                         'card': '0 10px 30px -10px rgba(0, 0, 0, 0.07)',
                     }
@@ -56,42 +56,32 @@
             background: #071626;
         }
         ::-webkit-scrollbar-thumb {
-            background: #ff6200;
+            background: #ff6600;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #ea5500;
+            background: #e05500;
         }
 
         /* Glassmorphism effects */
         .glass-dark {
-            background: rgba(11, 32, 56, 0.75);
+            background: rgba(11, 32, 56, 0.85);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.09);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-        }
-        
-        /* Subtle animated road stripe */
-        @keyframes roadScroll {
-            0% { background-position: 0 0; }
-            100% { background-position: 40px 0; }
-        }
-        .road-pattern {
-            background-image: repeating-linear-gradient(90deg, #ff6200, #ff6200 20px, transparent 20px, transparent 40px);
-            animation: roadScroll 1.2s linear infinite;
+            border: 1px solid rgba(226, 232, 240, 0.85);
         }
 
-        /* Hero glow blob */
+        /* Ambient Glow Blobs */
         .hero-blob {
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255,98,0,0.18) 0%, rgba(11,32,56,0) 70%);
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(255,102,0,0.18) 0%, rgba(11,32,56,0) 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -99,19 +89,16 @@
 </head>
 <body class="bg-brand-grayBg text-slate-800 antialiased selection:bg-brand-orange selection:text-white">
 
-    <!-- ВЕРХНЯЯ ИНФО-ПАНЕЛЬ (Уведомление о наборе) -->
+    <!-- ВЕРХНЯЯ ИНФО-ПАНЕЛЬ -->
     <div class="bg-gradient-to-r from-brand-dark via-brand-navy to-brand-dark text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10 relative z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
                 <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-orange text-white animate-pulse">
-                    Актуально: 2026
+                    Набор 2026
                 </span>
-                <span class="font-medium">Идёт набор в ближайшую группу категории «В» в с. Большое Сорокино!</span>
+                <span class="font-medium">Категория «В» — 55 000 ₽ единым платежом, всё включено! Места ограничены (до 10 курсантов в группе).</span>
             </div>
             <div class="hidden md:flex items-center gap-6 text-slate-300">
-                <a href="tel:+79990000000" class="hover:text-brand-orange transition-colors flex items-center gap-1.5 text-xs">
-                    <i class="fa-solid fa-phone text-brand-orange"></i> Консультация по телефону
-                </a>
                 <a href="mailto:a.shchuchka@mail.ru" class="hover:text-brand-orange transition-colors flex items-center gap-1.5 text-xs">
                     <i class="fa-solid fa-envelope text-brand-orange"></i> a.shchuchka@mail.ru
                 </a>
@@ -120,7 +107,7 @@
         </div>
     </div>
 
-    <!-- ГЛАВНОЕ МЕНЮ (Sticky Header) -->
+    <!-- ШАПКА САЙТА (Sticky Header) -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -131,112 +118,114 @@
                         <img src="logo.jpg" alt="Автошкола Ре-Старт" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/0b2038/ffffff?text=Ре-Старт';">
                     </div>
                     <div class="hidden lg:block">
-                        <span class="block text-xs font-semibold uppercase tracking-wider text-brand-orange">Автошкола • Большое Сорокино</span>
+                        <span class="block text-xs font-semibold uppercase tracking-wider text-brand-orange">Автошкола • с. Большое Сорокино</span>
                         <span class="text-sm font-bold text-brand-dark">ИП Щучка А. Г.</span>
                     </div>
                 </a>
 
-                <!-- Навигация десктоп -->
-                <nav class="hidden lg:flex items-center gap-8">
+                <!-- Навигация -->
+                <nav class="hidden lg:flex items-center gap-7">
                     <a href="#advantages" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Преимущества</a>
-                    <a href="#courses" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Программы и цены</a>
+                    <a href="#pricing" class="text-sm font-semibold text-brand-orange hover:text-brand-orangeHover transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-tag text-xs"></i> Стоимость: 55 000 ₽
+                    </a>
+                    <a href="#courses" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Программы</a>
                     <a href="#base" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Автодром и база</a>
                     <a href="#teachers" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Преподаватели</a>
                     <a href="#documents" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors flex items-center gap-1.5">
-                        <i class="fa-regular fa-file-pdf text-brand-orange"></i> Документы
+                        <i class="fa-regular fa-file-pdf text-brand-orange"></i> Акт 2026
                     </a>
                     <a href="#contacts" class="text-sm font-semibold text-slate-700 hover:text-brand-orange transition-colors">Контакты</a>
                 </nav>
 
                 <!-- Кнопки в шапке -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <button onclick="openPdfModal()" class="px-3.5 py-2 text-xs font-bold text-brand-navy bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200">
-                        <i class="fa-solid fa-stamp text-brand-orange"></i> Акт 2026
+                    <button onclick="openPdfModal()" class="px-3.5 py-2 text-xs font-bold text-brand-navy bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200" title="Официальный Акт обследования">
+                        <i class="fa-solid fa-stamp text-brand-orange"></i> Акт обследования
                     </button>
                     <a href="#contact-form" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-orange to-brand-accent text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md shadow-brand-orange/20 hover:shadow-glow hover:translate-y-[-1px] transition-all duration-200">
-                        <span>Записаться</span>
+                        <span>Записаться (55 000 ₽)</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
 
-                <!-- Бургер кнопка -->
+                <!-- Кнопка мобильного меню -->
                 <button id="mobileMenuBtn" aria-label="Открыть мобильное меню" class="lg:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-orange hover:bg-slate-100 focus:outline-none">
                     <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Мобильное меню -->
+        <!-- Выпадающее меню для смартфонов -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 transition-all duration-300">
             <a href="#advantages" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Преимущества</a>
-            <a href="#courses" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Программы и стоимость</a>
-            <a href="#base" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Автодром и класс</a>
+            <a href="#pricing" onclick="closeMobileMenu()" class="block py-2 text-base font-bold text-brand-orange border-b border-slate-100">Стоимость курса: 55 000 ₽ (Всё включено)</a>
+            <a href="#courses" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Все программы обучения</a>
+            <a href="#base" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Автодром 3 011 м² и класс</a>
             <a href="#teachers" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Инструкторы</a>
-            <a href="#documents" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Официальные документы</a>
-            <a href="#contacts" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange">Контакты</a>
+            <a href="#documents" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange border-b border-slate-100">Акт обследования (PDF)</a>
+            <a href="#contacts" onclick="closeMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-orange">Контакты и адрес</a>
             
             <div class="pt-2 flex flex-col gap-2">
                 <button onclick="openPdfModal(); closeMobileMenu();" class="w-full py-2.5 px-4 text-center rounded-xl bg-slate-100 text-brand-navy font-bold text-sm flex items-center justify-center gap-2">
                     <i class="fa-regular fa-file-pdf text-brand-orange"></i> Акт обследования 2026 (PDF)
                 </button>
                 <a href="#contact-form" onclick="closeMobileMenu()" class="w-full py-3 px-4 text-center rounded-xl bg-brand-orange text-white font-bold text-sm shadow-md">
-                    Записаться на обучение
+                    Записаться на обучение за 55 000 ₽
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO СЕКЦИЯ -->
+    <!-- ГЛАВНЫЙ ЭКРАН (HERO) -->
     <section class="relative bg-gradient-to-br from-brand-dark via-brand-navy to-[#07192d] text-white pt-16 pb-24 overflow-hidden">
-        <!-- Флуоресцентные блики и разметка -->
         <div class="hero-blob top-10 -left-20"></div>
         <div class="hero-blob bottom-0 right-0"></div>
         
-        <!-- Фоновые декоративные дорожные полосы -->
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Левая колонка Hero -->
+                <!-- Левая колонка -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-brand-accent text-xs sm:text-sm font-semibold tracking-wide">
-                        <i class="fa-solid fa-shield-halved text-brand-orange"></i> Официальная лицензированная база • Акт от 12.10.2026
+                        <i class="fa-solid fa-shield-halved text-brand-orange"></i> Официальный Акт обследования от 12.10.2026 г.
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-display leading-[1.15]">
-                        Ваш надёжный старт <br class="hidden sm:inline">
-                        на дорогах: <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-400 to-amber-300">Категория «В»</span> без стресса
+                        Подготовка водителей <br class="hidden sm:inline">
+                        категории «В» за <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-400 to-amber-300">55 000 ₽</span>
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        Автошкола <strong class="text-white">«Ре-Старт» (ИП Щучка А. Г.)</strong> — первоклассная подготовка водителей и восстановление уверенных навыков вождения в с. Большое Сорокино и Тюменской области. Учим безопасному вождению на собственном автодроме.
+                        Автошкола <strong class="text-white">«Ре-Старт» (ИП Щучка А. Г.)</strong> в с. Большое Сорокино. Прозрачный единый платёж «всё включено» — без скрытых доплат за бензин, автодром или подачу автомобиля на экзамен.
                     </p>
 
-                    <!-- Преимущества в Hero -->
+                    <!-- Ключевые показатели -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-left">
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/10">
-                            <div class="text-2xl font-extrabold text-brand-orange font-display">3 011 м²</div>
-                            <div class="text-xs text-slate-300 mt-0.5">Собственный закрытый автодром</div>
+                        <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="text-2xl font-black text-brand-orange font-display">55 000 ₽</div>
+                            <div class="text-xs text-slate-300 mt-0.5 font-medium">Единый фиксированный платёж</div>
                         </div>
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/10">
-                            <div class="text-2xl font-extrabold text-brand-orange font-display">до 10</div>
-                            <div class="text-xs text-slate-300 mt-0.5">Человек в группе (внимание каждому)</div>
+                        <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="text-2xl font-black text-brand-orange font-display">3 011 м²</div>
+                            <div class="text-xs text-slate-300 mt-0.5 font-medium">Закрытый собственный автодром</div>
                         </div>
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/10">
-                            <div class="text-2xl font-extrabold text-amber-400 font-display">100%</div>
-                            <div class="text-xs text-slate-300 mt-0.5">Соответствие нормам ГИБДД</div>
+                        <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="text-2xl font-black text-amber-400 font-display">до 10</div>
+                            <div class="text-xs text-slate-300 mt-0.5 font-medium">Мест в группе (персонально)</div>
                         </div>
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/10">
-                            <div class="text-2xl font-extrabold text-amber-400 font-display">0%</div>
-                            <div class="text-xs text-slate-300 mt-0.5">Честная рассрочка платежа</div>
+                        <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="text-2xl font-black text-emerald-400 font-display">100%</div>
+                            <div class="text-xs text-slate-300 mt-0.5 font-medium">Честный договор без доплат</div>
                         </div>
                     </div>
 
                     <!-- Кнопки действий -->
                     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl font-extrabold text-base bg-gradient-to-r from-brand-orange to-brand-accent text-white shadow-glow hover:translate-y-[-2px] transition-all text-center">
-                            Записаться на обучение
+                            Записаться за 55 000 ₽
                         </a>
                         <button onclick="openPdfModal()" class="w-full sm:w-auto px-6 py-4 rounded-xl font-bold text-base bg-white/10 hover:bg-white/15 text-white border border-white/20 backdrop-blur-md transition-all flex items-center justify-center gap-2 group">
                             <i class="fa-solid fa-file-pdf text-brand-orange group-hover:scale-110 transition-transform"></i>
@@ -244,89 +233,218 @@
                         </button>
                     </div>
 
-                    <!-- Доверительная строка -->
+                    <!-- Доверие -->
                     <div class="flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-400 pt-2">
                         <i class="fa-solid fa-circle-check text-emerald-400"></i>
-                        <span>ОГРНИП 326723200041412 • Проверено и аттестовано 2026 г.</span>
+                        <span>ОГРНИП 326723200041412 • Полная аттестация базы по нормам 196-ФЗ</span>
                     </div>
                 </div>
 
-                <!-- Правая колонка Hero (Интерактивная карточка курса) -->
+                <!-- Правая колонка: Карточка тарифа -->
                 <div class="lg:col-span-5">
                     <div class="relative">
-                        <!-- Декоративная рамка под карточкой -->
                         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-orange to-brand-surface opacity-30 blur-xl"></div>
                         
-                        <div class="relative rounded-2xl glass-dark p-6 sm:p-8 text-white shadow-2xl border border-white/10">
+                        <div class="relative rounded-3xl glass-dark p-6 sm:p-8 text-white shadow-2xl border border-white/10">
+                            
                             <div class="flex items-center justify-between pb-4 border-b border-white/10">
                                 <div>
-                                    <span class="text-xs uppercase tracking-wider text-brand-orange font-bold">Ближайший старт курса</span>
-                                    <h2 class="text-xl font-bold font-display mt-0.5">Категория «В» (Легковые авто)</h2>
+                                    <span class="text-xs uppercase tracking-wider text-brand-orange font-extrabold">Полный утвержденный курс</span>
+                                    <h2 class="text-2xl font-extrabold font-display mt-0.5">Категория «В»</h2>
                                 </div>
-                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                                    Места есть
-                                </span>
+                                <div class="text-right">
+                                    <span class="text-2xl sm:text-3xl font-black text-brand-orange font-display">55 000 ₽</span>
+                                    <span class="block text-[11px] text-slate-300">единый платёж</span>
+                                </div>
                             </div>
 
                             <div class="py-5 space-y-3.5 text-sm">
                                 <div class="flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0 mt-0.5">
-                                        <i class="fa-solid fa-chalkboard-user text-xs"></i>
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-white">Теоретический курс в уютном классе</div>
-                                        <div class="text-xs text-slate-300">с. Большое Сорокино, ул. Ленина, д. 28 (2 этаж)</div>
+                                        <div class="font-semibold text-white">Полный теоретический курс ПДД</div>
+                                        <div class="text-xs text-slate-300">Учебный класс 49,7 м² (с. Большое Сорокино, ул. Ленина, 28)</div>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0 mt-0.5">
-                                        <i class="fa-solid fa-road text-xs"></i>
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-white">Оборудованный автодром 3 011 м²</div>
-                                        <div class="text-xs text-slate-300">ул. Советская, д. 245 Б: эстакада, змейка, парковка</div>
+                                        <div class="font-semibold text-white">Практическое вождение на автодроме 3 011 м²</div>
+                                        <div class="text-xs text-slate-300">Отработка всех экзаменационных упражнений и эстакады</div>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0 mt-0.5">
-                                        <i class="fa-solid fa-car-side text-xs"></i>
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-white">Учебный автомобиль LADA Kalina</div>
-                                        <div class="text-xs text-slate-300">С дублирующими педалями тормоза и сцепления</div>
+                                        <div class="font-semibold text-white">Бензин и ГСМ уже включены в цену</div>
+                                        <div class="text-xs text-slate-300">Никаких сборов на топливо и амортизацию в процессе учебы</div>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0 mt-0.5">
-                                        <i class="fa-solid fa-graduation-cap text-xs"></i>
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-white">Сопровождение на экзамене в ГИБДД</div>
-                                        <div class="text-xs text-slate-300">Сдача на том же авто, на котором обучались</div>
+                                        <div class="font-semibold text-white">Предоставление авто на экзамен ГИБДД</div>
+                                        <div class="text-xs text-slate-300">Сдача на привычной учебной LADA Kalina (А665РТ172)</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-white">Свидетельство об окончании автошколы</div>
+                                        <div class="text-xs text-slate-300">Официальный документ государственного образца</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Быстрый интерактивный мини-расчет -->
-                            <div class="pt-4 border-t border-white/10 bg-white/5 rounded-xl p-4">
-                                <div class="flex items-center justify-between text-xs text-slate-300 mb-2">
-                                    <span>Удобная рассрочка на 3-4 месяца:</span>
-                                    <span class="font-bold text-brand-accent">0% переплат</span>
+                            <div class="pt-4 border-t border-white/10 bg-white/5 rounded-2xl p-4">
+                                <div class="text-xs text-slate-300 mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-file-contract text-brand-orange"></i>
+                                    <span>Цена 55 000 ₽ прописывается в договоре и неизменна.</span>
                                 </div>
-                                <div class="flex items-baseline justify-between">
-                                    <div>
-                                        <span class="text-xs text-slate-400">Первый взнос:</span>
-                                        <div class="text-lg font-extrabold text-white">от 5 000 ₽</div>
-                                    </div>
-                                    <a href="#contact-form" class="px-4 py-2 bg-brand-orange hover:bg-brand-orangeHover rounded-lg text-xs font-bold text-white transition-colors">
-                                        Забронировать место
-                                    </a>
+                                <a href="#contact-form" class="w-full block py-3 text-center bg-brand-orange hover:bg-brand-orangeHover rounded-xl text-sm font-extrabold text-white transition-colors shadow-md">
+                                    Занять место в группе
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ПОЛНАЯ ПРОЗРАЧНОСТЬ ЦЕНЫ 55 000 ₽ (ВМЕСТО РАССРОЧЕК) -->
+    <section id="pricing" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
+                    Честная ценовая политика
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
+                    55 000 ₽ — Единый платёж. Всё включено.
+                </h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    Мы принципиально отказались от запутанных кредитов, банковских процентов и скрытых доплат. Вы вносите фиксированную стоимость один раз при заключении договора и спокойно учитесь до получения водительского удостоверения.
+                </p>
+            </div>
+
+            <!-- Сравнительный блок честности -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Что входит в Ре-Старт за 55 000 ₽ -->
+                <div class="lg:col-span-7 rounded-3xl bg-slate-50 border-2 border-brand-orange p-8 sm:p-10 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <span class="text-xs uppercase font-extrabold text-brand-orange">Автошкола «Ре-Старт»</span>
+                                <h3 class="text-2xl font-extrabold text-brand-dark font-display">Что входит в 55 000 рублей:</h3>
+                            </div>
+                            <span class="px-3.5 py-1.5 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 border border-emerald-200">
+                                Честная цена
+                            </span>
+                        </div>
+
+                        <div class="space-y-4 text-sm text-slate-700">
+                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-brand-dark">Полный теоретический курс ПДД 2026</strong>
+                                    <p class="text-xs text-slate-500 mt-0.5">Занятия в оборудованном кабинете на ул. Ленина, д. 28 с мультимедийными материалами.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-brand-dark">Уроки на собственном автодроме 3 011 м²</strong>
+                                    <p class="text-xs text-slate-500 mt-0.5">Асфальтобетонное покрытие, наклонная эстакада 8–16%, упражнения любой сложности.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-brand-dark">Городское вождение и ГСМ (Бензин)</strong>
+                                    <p class="text-xs text-slate-500 mt-0.5">Топливные расходы уже заложены в стоимость. Никаких доплат инструктору за бензин!</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-brand-dark">Курс первой помощи и основы психологии</strong>
+                                    <p class="text-xs text-slate-500 mt-0.5">Преподавание ведет дипломированный медицинский специалист Лумпова М. В.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-brand-dark">Внутренний экзамен и подача авто в ГИБДД</strong>
+                                    <p class="text-xs text-slate-500 mt-0.5">Организованная сдача и сопровождение на учебном автомобиле LADA Kalina.</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Итоговая стоимость курса:</span>
+                            <span class="text-3xl font-black text-brand-dark font-display">55 000 ₽</span>
+                        </div>
+                        <a href="#contact-form" class="px-6 py-3.5 bg-brand-orange hover:bg-brand-orangeHover text-white rounded-xl font-extrabold text-sm shadow-md transition-all">
+                            Заключить договор
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Почему единый платёж выгоднее и безопаснее -->
+                <div class="lg:col-span-5 rounded-3xl bg-brand-navy p-8 sm:p-10 text-white shadow-xl flex flex-col justify-between border border-white/10">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-accent text-xs font-bold mb-4">
+                            <i class="fa-solid fa-shield-check"></i> Защита от скрытых расходов
+                        </div>
+
+                        <h3 class="text-2xl font-bold font-display text-white mb-4">
+                            Почему курсанты ценят единый платёж:
+                        </h3>
+
+                        <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <strong class="text-white block mb-1">Без мелкого шрифта и процентов</strong>
+                                Никаких кредитных обязательств перед сторонними банками, скрытых комиссий или внезапных пени.
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <strong class="text-white block mb-1">Фиксация цены в официальном договоре</strong>
+                                Сумма 55 000 ₽ закрепляется юридически с ИП Щучка А. Г. и не может увеличиться ни при каких обстоятельствах.
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <strong class="text-white block mb-1">Спокойствие на протяжении всего обучения</strong>
+                                Вы сосредоточены исключительно на правилах дорожного движения и практике за рулём, а не на подсчете доплат за каждый литр топлива.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-white/10 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-file-signature text-brand-orange text-lg"></i>
+                        <span>Договор заключается в учебном классе: ул. Ленина, д. 28.</span>
                     </div>
                 </div>
 
@@ -335,508 +453,411 @@
     </section>
 
     <!-- СЕКЦИЯ ПРЕИМУЩЕСТВ -->
-    <section id="advantages" class="py-20 bg-white">
+    <section id="advantages" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
-                    Стандарты качества
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+                    Преимущества автошколы
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
-                    Почему будущие водители выбирают автошколу «Ре-Старт»
+                    Почему жители района выбирают «Ре-Старт»
                 </h2>
                 <p class="text-slate-600 mt-4 text-base">
-                    Мы создали максимально комфортную и спокойную атмосферу без криков, стресса и скрытых доплат. Наша цель — ваша безопасная езда на дорогах общего пользования.
+                    Официально аттестованная материальная база, чуткие наставники и спокойное обучение без криков и стресса.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Преимущество 1 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Опытный состав педагогов</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Руководитель и наставник Щучка Алексей Григорьевич имеет педагогическое образование (ИГПИ им. Ершова) и диплом мастера производственного обучения вождению. Преподавание медицины ведёт специалист с профильным образованием.
-                    </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Официально подтверждено Актом 2026
-                    </div>
-                </div>
-
-                <!-- Преимущество 2 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                <!-- Карточка 1 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
                         <i class="fa-solid fa-road-barrier"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Собственный закрытый автодром</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Площадка 3011 кв. метров по ул. Советская, д. 245 Б с ровным асфальтобетонным покрытием, эстакадой с нормативным уклоном 8–16%, конусами и ограждением по всему периметру для полной безопасности.
+                        Площадка 3 011 м² (ул. Советская, 245 Б) с ровным асфальтобетонным покрытием, ограждением по всему периметру, эстакадой с уклоном 8–16%, конусами и разметкой.
                     </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Круглогодичное функционирование
-                    </div>
                 </div>
 
-                <!-- Преимущество 3 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-users-line"></i>
+                <!-- Карточка 2 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Опытный педагогический состав</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Руководитель Щучка А. Г. имеет диплом мастера производственного обучения вождению и педагогическое образование. Первая помощь преподается медработником.
+                    </p>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-users"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Камерные группы до 10 человек</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Учебный кабинет площадью 49,7 кв. м (ул. Ленина, д. 28) рассчитан всего на 10 посадочных мест. Это гарантирует персональный разбор каждого сложного перекрёстка и билета с каждым студентом.
+                        Учебный класс 49,7 м² рассчитан ровно на 10 посадочных мест. Никаких переполненных лекционных залов: внимание уделяется каждому курсанту.
                     </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Без переполненных душных аудиторий
-                    </div>
                 </div>
 
-                <!-- Преимущество 4 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-calendar-check"></i>
+                <!-- Карточка 4 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-file-circle-check"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Гибкий график занятий</h3>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Официальный Акт 2026 года</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Подбираем время уроков теории и практического вождения индивидуально под ваш рабочий график, посменную работу или учёбу. Доступны вечерние группы и занятия в выходные дни.
+                        Акт обследования учебно-материальной базы № 1 от 12.10.2026 г. подтверждает 100% соответствие всем требованиям Федерального закона № 196-ФЗ.
                     </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Вождение по согласованию
-                    </div>
                 </div>
 
-                <!-- Преимущество 5 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                <!-- Карточка 5 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-car-side"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Прозрачная рассрочка 0%</h3>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Оборудованный учебный автомобиль</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Никаких скрытых платежей за бензин или амортизацию. Оплата разбивается на удобные этапы на весь период обучения без участия банков и процентов.
+                        LADA KALINA (госномер А665РТ172) с сертифицированными дублирующими педалями, доп. зеркалами, действующим техосмотром и страховкой.
                     </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Фиксация стоимости в договоре
-                    </div>
                 </div>
 
-                <!-- Преимущество 6 -->
-                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-orange/30 hover:shadow-xl hover:bg-white transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-id-card"></i>
+                <!-- Карточка 6 -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-orange/40 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-handshake"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Подготовка к сдаче в ГИБДД</h3>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Сопровождение в ГИБДД</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Полная методическая база, актуальные билеты по нормам 2026 года и практическая отработка экзаменационных маневров до автоматизма на сертифицированном учебном ТС.
+                        Организованная подача учебного автомобиля на государственный экзамен. Вы сдаете на том же авто, на котором накатывали часы на автодроме.
                     </p>
-                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-brand-orange">
-                        <i class="fa-solid fa-check"></i> Сопровождение инструктором
-                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦИЯ ПРОГРАММ ОБУЧЕНИЯ И КАЛЬКУЛЯТОР -->
-    <section id="courses" class="py-20 bg-slate-100 border-y border-slate-200/70">
+    <!-- СЕКЦИЯ ПРОГРАММ ОБУЧЕНИЯ -->
+    <section id="courses" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100/80 px-3 py-1 rounded-full border border-orange-200">
-                    Направления подготовки
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
+                    Учебные программы
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
-                    Программы обучения в автошколе «Ре-Старт»
+                    Программы подготовки в автошколе «Ре-Старт»
                 </h2>
                 <p class="text-slate-600 mt-4 text-base">
-                    Выберите подходящую программу — от получения первых прав с нуля до восстановления утраченных навыков вождения.
+                    Выберите нужное направление — от полного курса с нуля до целевой отработки экзаменационных билетов и маршрутов.
                 </p>
             </div>
 
-            <!-- Сетка программ -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <!-- Программа 1: Категория B (Флагман) -->
-                <div class="rounded-3xl bg-white border-2 border-brand-orange shadow-xl overflow-hidden flex flex-col relative transition-transform hover:-translate-y-1">
+                <!-- Программа 1: Категория B (Флагман 55 000 ₽) -->
+                <div class="rounded-3xl bg-white border-2 border-brand-orange shadow-2xl overflow-hidden flex flex-col justify-between relative transition-transform hover:-translate-y-1">
                     <div class="absolute top-4 right-4 z-10 bg-brand-orange text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow-md">
-                        Популярный выбор
+                        Основной курс
                     </div>
 
-                    <div class="h-52 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=700&q=80" alt="Подготовка водителей категории B" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-white">
-                            <span class="text-xs uppercase font-bold text-brand-accent">ОКВЭД 85.42.1</span>
-                            <h3 class="text-xl font-bold font-display">Категория «B» — Полный курс</h3>
+                    <div>
+                        <div class="h-52 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=700&q=80" alt="Подготовка водителей категории B" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-6 text-white">
+                                <span class="text-xs uppercase font-extrabold text-brand-accent">ОКВЭД 85.42.1</span>
+                                <h3 class="text-xl font-bold font-display">Подготовка водителей (Категория «В»)</h3>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-                        <div class="space-y-4">
+                        <div class="p-6 sm:p-8 space-y-4">
                             <p class="text-slate-600 text-sm">
-                                Фундаментальная программа подготовки водителей легковых автомобилей согласно стандартам Примерных программ РФ. Включает всю теорию, занятия на автодроме и в реальном городском потоке.
+                                Полный курс согласно Примерной программе РФ: теория ПДД, отработка маневров на автодроме, езда по улицам, первая помощь и сдача в ГИБДД.
                             </p>
                             
                             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Полный теоретический курс ПДД</span>
+                                    <span>Полная теория ПДД в классе (ул. Ленина, 28)</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Отработка упражнений на автодроме 3011 м²</span>
+                                    <span>Практика на автодроме 3 011 м² (эстакада, змейка)</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Практическое вождение в городе</span>
+                                    <span>Вождение в реальных дорожных условиях</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Уроки первой помощи и психологии</span>
+                                    <span>ГСМ (топливо) полностью включено в цену</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Официальное свидетельство об окончании</span>
+                                    <span>Свидетельство установленного образца</span>
                                 </li>
                             </ul>
                         </div>
+                    </div>
 
-                        <div class="mt-8 pt-6 border-t border-slate-100">
-                            <div class="flex items-baseline justify-between mb-4">
-                                <div>
-                                    <span class="text-xs text-slate-500 block">Форма обучения:</span>
-                                    <span class="text-base font-bold text-brand-navy">Очная (вечер/вых.)</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-xs text-slate-500 block">Рассрочка:</span>
-                                    <span class="text-sm font-extrabold text-brand-orange">0% переплат</span>
-                                </div>
+                    <div class="p-6 sm:p-8 pt-0">
+                        <div class="p-4 rounded-2xl bg-orange-50 border border-orange-200 mb-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Стоимость курса:</span>
+                                <span class="text-2xl font-black text-brand-dark">55 000 ₽</span>
                             </div>
-                            <a href="#contact-form" onclick="selectCourse('Категория B (Полный курс)')" class="w-full block py-3.5 px-4 bg-brand-orange hover:bg-brand-orangeHover text-white text-center font-bold text-sm rounded-xl shadow-md transition-all">
-                                Записаться в группу
-                            </a>
+                            <span class="text-xs font-bold text-brand-orange bg-white px-2.5 py-1 rounded-md border border-orange-200">
+                                Единый платёж
+                            </span>
                         </div>
+                        <a href="#contact-form" onclick="selectCourse('Подготовка водителей (Категория B) — 55 000 ₽')" class="w-full block py-3.5 px-4 bg-brand-orange hover:bg-brand-orangeHover text-white text-center font-bold text-sm rounded-xl shadow-md transition-all">
+                            Записаться на курс
+                        </a>
                     </div>
                 </div>
 
-                <!-- Программа 2: Восстановление навыков -->
-                <div class="rounded-3xl bg-white border border-slate-200 shadow-card overflow-hidden flex flex-col transition-transform hover:-translate-y-1">
-                    <div class="h-52 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Восстановление навыков вождения" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-white">
-                            <span class="text-xs uppercase font-bold text-brand-accent">Индивидуально</span>
-                            <h3 class="text-xl font-bold font-display">Восстановление навыков</h3>
+                <!-- Программа 2: Восстановление навыков вождения -->
+                <div class="rounded-3xl bg-white border border-slate-200 shadow-card overflow-hidden flex flex-col justify-between transition-transform hover:-translate-y-1">
+                    <div>
+                        <div class="h-52 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Восстановление навыков вождения" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-6 text-white">
+                                <span class="text-xs uppercase font-extrabold text-brand-accent">Практика</span>
+                                <h3 class="text-xl font-bold font-display">Восстановление навыков</h3>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-                        <div class="space-y-4">
+                        <div class="p-6 sm:p-8 space-y-4">
                             <p class="text-slate-600 text-sm">
-                                Специальный курс для тех, у кого уже есть водительское удостоверение, но был длительный перерыв в вождении либо присутствует страх самостоятельного выезда в город.
+                                Индивидуальные практические уроки с мастером ПО для тех, у кого уже есть водительское удостоверение, но был перерыв в стаже или остался страх за рулем.
                             </p>
                             
                             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Преодоление психологического барьера</span>
+                                    <span>Преодоление страха перед интенсивным потоком</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Отработка личных маршрутов (дом-работа)</span>
+                                    <span>Отработка маршрутов (работа, магазин, дом)</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Парковка в реальных стеснённых условиях</span>
+                                    <span>Параллельная парковка и гараж без нервов</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Движение по трассе и сложные развязки</span>
+                                    <span>Движение по трассе и обгоны</span>
                                 </li>
                             </ul>
                         </div>
+                    </div>
 
-                        <div class="mt-8 pt-6 border-t border-slate-100">
-                            <div class="flex items-baseline justify-between mb-4">
-                                <div>
-                                    <span class="text-xs text-slate-500 block">Формат:</span>
-                                    <span class="text-base font-bold text-brand-navy">Почасовые уроки</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-xs text-slate-500 block">Автомобиль:</span>
-                                    <span class="text-sm font-semibold text-brand-dark">Учебный / Свой</span>
-                                </div>
+                    <div class="p-6 sm:p-8 pt-0">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-4 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Формат занятий:</span>
+                                <span class="text-base font-bold text-brand-dark">Индивидуальные часы</span>
                             </div>
-                            <a href="#contact-form" onclick="selectCourse('Восстановление навыков вождения')" class="w-full block py-3.5 px-4 bg-brand-navy hover:bg-brand-dark text-white text-center font-bold text-sm rounded-xl transition-all">
-                                Записаться на практику
-                            </a>
+                            <span class="text-xs font-semibold text-slate-600 bg-white px-2.5 py-1 rounded-md border border-slate-200">
+                                Практикум
+                            </span>
                         </div>
+                        <a href="#contact-form" onclick="selectCourse('Восстановление навыков вождения')" class="w-full block py-3.5 px-4 bg-brand-navy hover:bg-brand-dark text-white text-center font-bold text-sm rounded-xl transition-all">
+                            Записаться на практику
+                        </a>
                     </div>
                 </div>
 
                 <!-- Программа 3: Подготовка к экзаменам ГИБДД -->
-                <div class="rounded-3xl bg-white border border-slate-200 shadow-card overflow-hidden flex flex-col transition-transform hover:-translate-y-1">
-                    <div class="h-52 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Подготовка к экзаменам в ГИБДД" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-white">
-                            <span class="text-xs uppercase font-bold text-brand-accent">Интенсив</span>
-                            <h3 class="text-xl font-bold font-display">Подготовка к ГИБДД</h3>
+                <div class="rounded-3xl bg-white border border-slate-200 shadow-card overflow-hidden flex flex-col justify-between transition-transform hover:-translate-y-1">
+                    <div>
+                        <div class="h-52 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Подготовка к экзаменам в ГИБДД" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-6 text-white">
+                                <span class="text-xs uppercase font-extrabold text-brand-accent">Интенсив</span>
+                                <h3 class="text-xl font-bold font-display">Подготовка к сдаче в ГИБДД</h3>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-                        <div class="space-y-4">
+                        <div class="p-6 sm:p-8 space-y-4">
                             <p class="text-slate-600 text-sm">
-                                Интенсивный практикум для уверенной сдачи теоретического и практического экзаменов. Проработка контрольных билетов, алгоритмов действий при инспекторе и ловушек на маршрутах.
+                                Прицельная отработка экзаменационных билетов и всех контрольных упражнений автодрома перед сдачей государственному инспектору.
                             </p>
                             
                             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Детальный разбор экзаменационных билетов</span>
+                                    <span>Разбор спорных и сложных экзаменационных вопросов</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Репетиция сдачи упражнений автодрома</span>
+                                    <span>Репетиция сдачи упражнений без штрафных баллов</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Отработка ошибок при маневрировании</span>
+                                    <span>Психологический настрой и алгоритм действий</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-orange"></i>
-                                    <span>Психологическая подготовка к экзамену</span>
+                                    <span>Проезд сложных перекрёстков села</span>
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="mt-8 pt-6 border-t border-slate-100">
-                            <div class="flex items-baseline justify-between mb-4">
-                                <div>
-                                    <span class="text-xs text-slate-500 block">Длительность:</span>
-                                    <span class="text-base font-bold text-brand-navy">Индивидуально</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-xs text-slate-500 block">Результат:</span>
-                                    <span class="text-sm font-semibold text-emerald-600">Готовность к сдаче</span>
-                                </div>
-                            </div>
-                            <a href="#contact-form" onclick="selectCourse('Подготовка к экзаменам в ГИБДД')" class="w-full block py-3.5 px-4 bg-brand-navy hover:bg-brand-dark text-white text-center font-bold text-sm rounded-xl transition-all">
-                                Разобрать сложные вопросы
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР РАССРОЧКИ -->
-            <div class="mt-16 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-3">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange bg-orange-50 px-3 py-1 rounded-full">
-                            Калькулятор обучения
-                        </span>
-                        <h3 class="text-2xl font-bold font-display text-brand-dark">Рассчитайте комфортный платёж</h3>
-                        <p class="text-slate-600 text-sm">
-                            В автошколе «Ре-Старт» действует честная беспроцентная рассрочка. Вы платите поэтапно в процессе обучения без банковских комиссий и скрытых условий.
-                        </p>
-                        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1">
-                            <div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-info text-brand-orange"></i> Без переплат</div>
-                            <p>Стоимость фиксируется в официальном договоре и не меняется до завершения подготовки.</p>
-                        </div>
                     </div>
 
-                    <div class="lg:col-span-7 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Выберите программу:</label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                                <button type="button" onclick="setCalcCourse('catB', 32000)" id="btnCourse1" class="calc-btn active px-3 py-2 text-xs font-bold rounded-xl border border-brand-orange bg-brand-orange text-white text-center transition-all">
-                                    Категория «В» (32 000 ₽)
-                                </button>
-                                <button type="button" onclick="setCalcCourse('refresh', 12000)" id="btnCourse2" class="calc-btn px-3 py-2 text-xs font-bold rounded-xl border border-slate-200 bg-white text-slate-700 text-center hover:border-slate-300 transition-all">
-                                    Восстановление (12 000 ₽)
-                                </button>
-                                <button type="button" onclick="setCalcCourse('express', 8000)" id="btnCourse3" class="calc-btn px-3 py-2 text-xs font-bold rounded-xl border border-slate-200 bg-white text-slate-700 text-center hover:border-slate-300 transition-all">
-                                    ГИБДД Интенсив (8 000 ₽)
-                                </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs font-bold text-slate-700 uppercase">Срок рассрочки:</label>
-                                <span class="text-sm font-extrabold text-brand-orange" id="calcMonthsDisplay">3 месяца</span>
-                            </div>
-                            <input type="range" min="1" max="4" step="1" value="3" id="calcMonthsInput" oninput="updateCalculator()" class="w-full accent-brand-orange cursor-pointer">
-                            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
-                                <span>1 месяц</span>
-                                <span>2 месяца</span>
-                                <span>3 месяца</span>
-                                <span>4 месяца</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                    <div class="p-6 sm:p-8 pt-0">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-4 flex items-center justify-between">
                             <div>
-                                <span class="text-xs text-slate-500 block">Ежемесячный платёж:</span>
-                                <div class="text-2xl font-black text-brand-navy" id="monthlyPaymentDisplay">~10 667 ₽/мес</div>
+                                <span class="text-xs text-slate-500 block">Цель программы:</span>
+                                <span class="text-base font-bold text-emerald-700">Сдача с 1 раза</span>
                             </div>
-                            <a href="#contact-form" class="px-5 py-3 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs shadow-md transition-all">
-                                Зафиксировать условия
-                            </a>
+                            <span class="text-xs font-semibold text-slate-600 bg-white px-2.5 py-1 rounded-md border border-slate-200">
+                                Экспресс
+                            </span>
                         </div>
+                        <a href="#contact-form" onclick="selectCourse('Подготовка к экзаменам в ГИБДД')" class="w-full block py-3.5 px-4 bg-brand-navy hover:bg-brand-dark text-white text-center font-bold text-sm rounded-xl transition-all">
+                            Записаться на интенсив
+                        </a>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
-    <!-- СЕКЦИЯ УЧЕБНО-МАТЕРИАЛЬНОЙ БАЗЫ (ПО ОФИЦИАЛЬНОМУ АКТУ 2026) -->
-    <section id="base" class="py-20 bg-white">
+    <!-- СЕКЦИЯ МАТЕРИАЛЬНО-ТЕХНИЧЕСКОЙ БАЗЫ (ПО ОФИЦИАЛЬНОМУ АКТУ 2026) -->
+    <section id="base" class="py-20 bg-slate-100 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
-                    Оснащение и инфраструктура
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+                    Инфраструктура и оснащение
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
                     Учебно-материальная база автошколы
                 </h2>
                 <p class="text-slate-600 mt-4 text-base">
-                    Все объекты и учебное оборудование полностью проверены и соответствуют требованиям Федерального закона № 196-ФЗ и примерным программам (Акт обследования от 12 октября 2026 года).
+                    Все параметры соответствуют требованиям ст. 16 и 20 Федерального закона № 196-ФЗ (Акт обследования от 12 октября 2026 года).
                 </p>
             </div>
 
-            <!-- Вкладки базы -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <!-- Переключатель вкладок -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
                 <button onclick="switchBaseTab('tab-autodrome')" id="btn-tab-autodrome" class="tab-btn active px-6 py-3 rounded-xl font-bold text-sm bg-brand-navy text-white shadow-md flex items-center gap-2 transition-all">
                     <i class="fa-solid fa-road text-brand-orange"></i>
                     <span>Закрытый автодром (3 011 м²)</span>
                 </button>
-                <button onclick="switchBaseTab('tab-classroom')" id="btn-tab-classroom" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 transition-all">
+                <button onclick="switchBaseTab('tab-classroom')" id="btn-tab-classroom" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm bg-white text-slate-700 hover:bg-slate-200 flex items-center gap-2 transition-all border border-slate-200">
                     <i class="fa-solid fa-chalkboard-user text-slate-500"></i>
                     <span>Учебный класс (ул. Ленина, 28)</span>
                 </button>
-                <button onclick="switchBaseTab('tab-car')" id="btn-tab-car" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 transition-all">
+                <button onclick="switchBaseTab('tab-car')" id="btn-tab-car" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm bg-white text-slate-700 hover:bg-slate-200 flex items-center gap-2 transition-all border border-slate-200">
                     <i class="fa-solid fa-car text-slate-500"></i>
                     <span>Учебный автомобиль (LADA Kalina)</span>
                 </button>
             </div>
 
-            <!-- Контент вкладок -->
-            
             <!-- Вкладка 1: Автодром -->
             <div id="tab-autodrome" class="base-tab-content block">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-card">
                     <div class="lg:col-span-6 space-y-5">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-orange/10 text-brand-orange text-xs font-bold">
                             <i class="fa-solid fa-location-dot"></i> с. Большое Сорокино, ул. Советская, д. 245 Б
                         </div>
                         <h3 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">
-                            Специализированная закрытая площадка 3 011 кв. м
+                            Закрытый учебный автодром площадью 3 011 м²
                         </h3>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Площадка полностью изолирована для учебного процесса. По периметру установлено надёжное ограждение, исключающее появление постороннего транспорта и пешеходов.
+                            Специализированная площадка с ровным асфальтобетонным покрытием и ограждением по всему периметру, исключающим появление постороннего автотранспорта и пешеходов.
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                            <div class="p-4 rounded-xl bg-white border border-slate-200">
-                                <div class="text-brand-orange text-xl mb-1"><i class="fa-solid fa-layer-group"></i></div>
-                                <div class="font-bold text-sm text-brand-dark">Покрытие</div>
-                                <div class="text-xs text-slate-500 mt-1">Ровное асфальтобетонное покрытие с водоотводом для всесезонных тренировок.</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                                <div class="text-brand-orange font-bold text-sm mb-1"><i class="fa-solid fa-ruler-combined"></i> Площадь автодрома</div>
+                                <div class="text-slate-600 font-semibold">3 011 кв. метров (в аренде)</div>
                             </div>
-                            <div class="p-4 rounded-xl bg-white border border-slate-200">
-                                <div class="text-brand-orange text-xl mb-1"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="font-bold text-sm text-brand-dark">Наклонная эстакада</div>
-                                <div class="text-xs text-slate-500 mt-1">Продольный уклон в пределах 8–16% для отработки трогания на подъеме без отката.</div>
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                                <div class="text-brand-orange font-bold text-sm mb-1"><i class="fa-solid fa-chart-line"></i> Наклонная эстакада</div>
+                                <div class="text-slate-600 font-semibold">Уклон 8–16% по ГОСТу</div>
                             </div>
-                            <div class="p-4 rounded-xl bg-white border border-slate-200">
-                                <div class="text-brand-orange text-xl mb-1"><i class="fa-solid fa-shapes"></i></div>
-                                <div class="font-bold text-sm text-brand-dark">Оснащение трассы</div>
-                                <div class="text-xs text-slate-500 mt-1">Специализированные конусы, разметочные стойки и четкие линии разметки упражнений.</div>
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                                <div class="text-brand-orange font-bold text-sm mb-1"><i class="fa-solid fa-road"></i> Покрытие</div>
+                                <div class="text-slate-600 font-semibold">Однородный асфальтобетон с водоотводом</div>
                             </div>
-                            <div class="p-4 rounded-xl bg-white border border-slate-200">
-                                <div class="text-brand-orange text-xl mb-1"><i class="fa-solid fa-shield"></i></div>
-                                <div class="font-bold text-sm text-brand-dark">Безопасность</div>
-                                <div class="text-xs text-slate-500 mt-1">Полное соблюдение требований Приказа МВД РФ и Федерального закона № 196-ФЗ.</div>
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                                <div class="text-brand-orange font-bold text-sm mb-1"><i class="fa-solid fa-shield"></i> Ограждение и стойки</div>
+                                <div class="text-slate-600 font-semibold">Конуса, стойки, периметральный забор</div>
                             </div>
                         </div>
 
-                        <div class="pt-2">
+                        <div>
                             <a href="https://yandex.ru/maps/?text=Тюменская+область+Большое+Сорокино+Советская+245Б" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-orange hover:text-brand-orangeHover">
-                                <i class="fa-solid fa-diamond-turn-right"></i> Проложить маршрут до автодрома на Яндекс.Картах
+                                <i class="fa-solid fa-map-location-dot"></i> Показать автодром на Яндекс.Картах &rarr;
                             </a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-6">
                         <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Учебный автодром" class="w-full h-80 object-cover">
-                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                <div class="text-sm font-bold">Оборудованная закрытая территория 3 011 м²</div>
-                                <div class="text-xs text-slate-300">Гарантия спокойного освоения упражнений до выезда на улицы села</div>
+                            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Закрытый автодром" class="w-full h-80 object-cover">
+                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs">
+                                <strong class="block text-sm">Автодром 3 011 м² • Круглогодичное функционирование</strong>
+                                Упражнения: параллельная парковка, эстакада, разворот в ограниченном пространстве, змейка.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Вкладка 2: Учебный класс -->
+            <!-- Вкладка 2: Класс -->
             <div id="tab-classroom" class="base-tab-content hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-card">
                     <div class="lg:col-span-6 space-y-5">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-orange/10 text-brand-orange text-xs font-bold">
                             <i class="fa-solid fa-location-dot"></i> с. Большое Сорокино, ул. Ленина, д. 28, 2 этаж
                         </div>
                         <h3 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">
-                            Современный учебный класс 49,7 кв. м
+                            Учебный кабинет 49,7 кв. м (10 посадочных мест)
                         </h3>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Обучение проходит в светлом, проветриваемом помещении. Класс рассчитан ровно на 10 посадочных мест, что создает почти индивидуальные условия для каждого курсанта.
+                            Оборудованный кабинет для комфортного изучения правил дорожного движения, технического устройства автомобиля и алгоритмов первой медицинской помощи.
                         </p>
 
                         <div class="space-y-3 pt-2 text-sm text-slate-700">
-                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200">
+                            <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
                                 <i class="fa-solid fa-desktop text-brand-orange mt-1"></i>
                                 <div>
-                                    <div class="font-bold text-brand-dark">Интерактивные учебные пособия</div>
-                                    <div class="text-xs text-slate-500">Мультимедийные экраны, актуальные стенды знаков и разметки.</div>
+                                    <div class="font-bold text-brand-dark">Мультимедийное оснащение</div>
+                                    <div class="text-xs text-slate-500">Экраны для наглядного разбора сложных дорожных ситуаций и перекрёстков.</div>
                                 </div>
                             </div>
 
-                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200">
+                            <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
                                 <i class="fa-solid fa-kit-medical text-brand-orange mt-1"></i>
                                 <div>
                                     <div class="font-bold text-brand-dark">Оборудование первой помощи</div>
-                                    <div class="text-xs text-slate-500">Тренажеры-манекены и аптечки для практической сердечно-легочной реанимации.</div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200">
-                                <i class="fa-solid fa-book-open-reader text-brand-orange mt-1"></i>
-                                <div>
-                                    <div class="font-bold text-brand-dark">Методические материалы 2026 года</div>
-                                    <div class="text-xs text-slate-500">Полный комплект утвержденных рабочих программ и экзаменационных билетов.</div>
+                                    <div class="text-xs text-slate-500">Тренажеры-манекены и аптечки для практической отработки реанимации.</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pt-2">
+                        <div>
                             <a href="https://yandex.ru/maps/?text=Тюменская+область+Большое+Сорокино+Ленина+28" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-orange hover:text-brand-orangeHover">
-                                <i class="fa-solid fa-diamond-turn-right"></i> Проложить маршрут до класса на Яндекс.Картах
+                                <i class="fa-solid fa-map-location-dot"></i> Показать учебный класс на Яндекс.Картах &rarr;
                             </a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-6">
                         <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Учебный класс" class="w-full h-80 object-cover">
-                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                <div class="text-sm font-bold">Учебный кабинет • 10 посадочных мест</div>
-                                <div class="text-xs text-slate-300">Договор аренды от 30.01.2004 г. Площадь: 49,7 м²</div>
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Учебный кабинет" class="w-full h-80 object-cover">
+                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs">
+                                <strong class="block text-sm">Учебный кабинет • 10 мест</strong>
+                                Договор аренды от 30.01.2004 г. Площадь: 49,7 м².
                             </div>
                         </div>
                     </div>
@@ -845,43 +866,39 @@
 
             <!-- Вкладка 3: Автомобиль -->
             <div id="tab-car" class="base-tab-content hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-card">
                     <div class="lg:col-span-6 space-y-5">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-orange/10 text-brand-orange text-xs font-bold">
                             <i class="fa-solid fa-car"></i> Учебное ТС категории «B»
                         </div>
                         <h3 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">
-                            LADA KALINA (Универсал, Механика)
+                            LADA KALINA (Легковой универсал, МКПП)
                         </h3>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Автомобиль специально переоборудован для обучения курсантов. Зарегистрирован в ГИБДД с официальной отметкой о внесении изменений в конструкцию.
+                            Автомобиль переоборудован для учебных целей в строгом соответствии с требованиями ГИБДД, оснащен дублирующими педалями тормоза и сцепления.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                            <div class="p-3 bg-white rounded-xl border border-slate-200">
-                                <span class="text-slate-400 block">Гос. регистрационный знак:</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <span class="text-slate-400 block">Госномер:</span>
                                 <span class="font-extrabold text-brand-dark text-sm">А665РТ 172</span>
                             </div>
-                            <div class="p-3 bg-white rounded-xl border border-slate-200">
-                                <span class="text-slate-400 block">Тип трансмиссии:</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <span class="text-slate-400 block">Коробка передач:</span>
                                 <span class="font-extrabold text-brand-dark text-sm">Механическая (МКПП)</span>
                             </div>
-                            <div class="p-3 bg-white rounded-xl border border-slate-200">
-                                <span class="text-slate-400 block">Безопасность курсанта:</span>
-                                <span class="font-extrabold text-brand-dark text-sm">Дублирующие педали сцепления и тормоза</span>
-                            </div>
-                            <div class="p-3 bg-white rounded-xl border border-slate-200">
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
                                 <span class="text-slate-400 block">Технический осмотр:</span>
-                                <span class="font-extrabold text-emerald-600 text-sm">Пройден до 04.02.2027 г.</span>
+                                <span class="font-extrabold text-emerald-600 text-sm">Действует до 04.02.2027 г.</span>
                             </div>
-                            <div class="p-3 bg-white rounded-xl border border-slate-200 sm:col-span-2">
-                                <span class="text-slate-400 block">Страховой полис ОСАГО:</span>
-                                <span class="font-bold text-brand-dark">Серия ХХХ № 0706454104 (АО СК «Двадцать первый век»)</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <span class="text-slate-400 block">ОСАГО (учебный полис):</span>
+                                <span class="font-extrabold text-brand-dark text-sm">АО СК «Двадцать первый век»</span>
                             </div>
                         </div>
 
                         <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center gap-3">
-                            <i class="fa-solid fa-certificate text-emerald-600 text-xl"></i>
+                            <i class="fa-solid fa-shield-check text-emerald-600 text-xl"></i>
                             <div>Полное соответствие п. 5 и 8 Основных положений по допуску ТС к эксплуатации.</div>
                         </div>
                     </div>
@@ -889,9 +906,9 @@
                     <div class="lg:col-span-6">
                         <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
                             <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Учебный автомобиль" class="w-full h-80 object-cover">
-                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                <div class="text-sm font-bold">LADA KALINA • Госномер А665РТ172</div>
-                                <div class="text-xs text-slate-300">Дополнительные зеркала, знак «У», дублирующие педали управления</div>
+                            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs">
+                                <strong class="block text-sm">LADA KALINA • Госномер А665РТ172</strong>
+                                Установлены сертифицированные дублирующие педали сцепления и тормоза.
                             </div>
                         </div>
                     </div>
@@ -901,25 +918,25 @@
         </div>
     </section>
 
-    <!-- СЕКЦИЯ ПРЕПОДАВАТЕЛЬСКОГО СОСТАВА (ИЗ ОФИЦИАЛЬНОГО АКТА) -->
-    <section id="teachers" class="py-20 bg-slate-100 border-t border-slate-200/80">
+    <!-- СЕКЦИЯ ПРЕПОДАВАТЕЛЬСКОГО СОСТАВА (ИЗ АКТА 2026) -->
+    <section id="teachers" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-                    Квалифицированные кадры
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
+                    Педагогические кадры
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
-                    Педагогический состав автошколы
+                    Преподаватели и мастера производственного обучения
                 </h2>
                 <p class="text-slate-600 mt-4 text-base">
-                    Преподаватели и мастера производственного обучения с профильным высшим и педагогическим образованием, многолетним водительским стажем и официальными дипломами.
+                    Официально заявленный в Акте состав преподавателей с подтвержденными дипломами и водительскими категориями.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Педагог 1: Щучка А. Г. -->
-                <div class="bg-white rounded-3xl p-8 border-2 border-brand-orange/40 shadow-xl flex flex-col justify-between relative">
+                <!-- Щучка А. Г. -->
+                <div class="bg-slate-50 rounded-3xl p-8 border-2 border-brand-orange shadow-xl flex flex-col justify-between relative">
                     <div class="absolute -top-3 left-8 bg-brand-orange text-white text-[11px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow-sm">
                         Руководитель автошколы
                     </div>
@@ -938,28 +955,28 @@
                         <div class="pt-2">
                             <div class="text-xs font-bold uppercase text-slate-400 mb-1">Преподаваемые дисциплины:</div>
                             <p class="text-xs text-slate-700 leading-relaxed">
-                                Основы законодательства РФ в сфере дорожного движения; Основы управления ТС категории «В»; Организация пассажирских перевозок; Практическое вождение.
+                                Законодательство в сфере дорожного движения; Основы управления ТС категории «В»; Организация перевозок; Практическое вождение.
                             </p>
                         </div>
 
                         <div class="pt-2">
-                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Образование и квалификация:</div>
+                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Дипломы и квалификация:</div>
                             <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                                <li>Диплом ВСГ № 5729572, ИГПИ им. П.П. Ершова («Профессиональное обучение»)</li>
-                                <li>Диплом № 771801044363 АНО ДПО «Гуманитарно-технический институт» (Педагог доп. проф. образования)</li>
-                                <li>Диплом № 771801044506 («Мастер производственного обучения вождению»)</li>
+                                <li>Диплом ВСГ № 5729572 ИГПИ им. П.П. Ершова («Профессиональное обучение»)</li>
+                                <li>Диплом 771801044363 АНО ДПО «ГТИ» (Педагог проф. обучения)</li>
+                                <li>Диплом 771801044506 (Мастер производственного обучения вождению)</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
                         <span class="text-slate-500">Водительские категории:</span>
-                        <span class="font-extrabold text-brand-navy bg-slate-100 px-2 py-1 rounded">B, B1, C, C1, CE, C1E, M</span>
+                        <span class="font-extrabold text-brand-navy bg-white border border-slate-200 px-2 py-1 rounded">B, B1, C, C1, CE, C1E, M</span>
                     </div>
                 </div>
 
-                <!-- Педагог 2: Лумпова М. В. -->
-                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between">
+                <!-- Лумпова М. В. -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <div class="w-16 h-16 rounded-2xl bg-brand-surface text-white flex items-center justify-center text-2xl font-bold font-display shadow-md">
@@ -979,22 +996,22 @@
                         </div>
 
                         <div class="pt-2">
-                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Образование и квалификация:</div>
+                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Дипломы и образование:</div>
                             <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                                <li>Диплом БВС № 0907467, ИГПИ им. П.П. Ершова (Учитель)</li>
-                                <li>Диплом 117224 0690033 ГАПОУ ТО «Ишимский медицинский колледж» (Квалификация: Медицинская сестра, 34.02.01 Сестринское дело)</li>
+                                <li>Диплом БВС № 0907467 ИГПИ им. П.П. Ершова (Учитель)</li>
+                                <li>Диплом 117224 0690033 «Ишимский медицинский колледж» (Квалификация: Медицинская сестра, Сестринское дело)</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
                         <span class="text-slate-500">Профиль:</span>
-                        <span class="font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Медицинская подготовка</span>
+                        <span class="font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-1 rounded">Медицинская подготовка</span>
                     </div>
                 </div>
 
-                <!-- Педагог 3: Шуляк А. В. -->
-                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between">
+                <!-- Шуляк А. В. -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <div class="w-16 h-16 rounded-2xl bg-brand-surface text-white flex items-center justify-center text-2xl font-bold font-display shadow-md">
@@ -1002,29 +1019,29 @@
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-brand-dark font-display">Шуляк Александр Васильевич</h3>
-                                <p class="text-xs text-brand-orange font-semibold">Преподаватель технического устройства ТС</p>
+                                <p class="text-xs text-brand-orange font-semibold">Преподаватель устройства ТС</p>
                             </div>
                         </div>
 
                         <div class="pt-2">
                             <div class="text-xs font-bold uppercase text-slate-400 mb-1">Преподаваемые дисциплины:</div>
                             <p class="text-xs text-slate-700 leading-relaxed">
-                                Устройство и техническое обслуживание транспортных средств категории «В»; Организация и выполнение грузовых/пассажирских автоперевозок.
+                                Устройство и техническое обслуживание транспортных средств категории «В»; Организация перевозок автотранспортом.
                             </p>
                         </div>
 
                         <div class="pt-2">
-                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Образование и квалификация:</div>
+                            <div class="text-xs font-bold uppercase text-slate-400 mb-1">Дипломы и образование:</div>
                             <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
                                 <li>Диплом № 117204 0004868 «Ишимский многопрофильный техникум» (Слесарь по ремонту автомобилей; водитель «В», «С»)</li>
-                                <li>Диплом бакалавра № 107204 0060738 ФГАОУ ВО «Тюменский государственный университет» (Агроинженерия)</li>
+                                <li>Диплом бакалавра № 107204 0060738 ТюмГУ (Агроинженерия)</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
                         <span class="text-slate-500">Профиль:</span>
-                        <span class="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Техническое устройство авто</span>
+                        <span class="font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-1 rounded">Устройство и ТО автомобиля</span>
                     </div>
                 </div>
 
@@ -1032,30 +1049,30 @@
         </div>
     </section>
 
-    <!-- СЕКЦИЯ ОФИЦИАЛЬНОЙ ДОКУМЕНТАЦИИ И РЕКВИЗИТОВ (АКТ САМООБСЛЕДОВАНИЯ 2026) -->
-    <section id="documents" class="py-20 bg-white">
+    <!-- СЕКЦИЯ ОФИЦИАЛЬНЫХ ДОКУМЕНТОВ И РЕКВИЗИТОВ -->
+    <section id="documents" class="py-20 bg-slate-100 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Информационный баннер Акта обследования -->
+            <!-- Баннер Акта обследования 2026 -->
             <div class="bg-gradient-to-r from-brand-dark via-brand-navy to-brand-surface rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden mb-16 border border-white/10">
                 <div class="absolute -right-16 -bottom-16 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                     <div class="lg:col-span-8 space-y-4">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-bold border border-brand-orange/30">
-                            <i class="fa-solid fa-file-shield"></i> Главный официальный документ
+                            <i class="fa-solid fa-file-shield"></i> Официальный документ автошколы
                         </div>
 
                         <h2 class="text-2xl sm:text-4xl font-extrabold font-display leading-tight">
-                            Акт обследования учебно-материальной базы организации № 1
+                            Акт обследования учебно-материальной базы № 1
                         </h2>
 
                         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Официальное заключение от <strong class="text-white">12 октября 2026 г.</strong>: материально-техническая база, учебные кабинеты, закрытый автодром 3 011 м² и педагогический состав <strong>ИП Щучка Алексей Григорьевич</strong> на 100% соответствуют требованиям Федерального закона № 196-ФЗ «О безопасности дорожного движения» и Примерной программе подготовки водителей категории «В».
+                            Акт от <strong class="text-white">12 октября 2026 года</strong> подтверждает: материально-техническая база ИП Щучка Алексей Григорьевич полностью соответствует всем требованиям Федерального закона № 196-ФЗ «О безопасности дорожного движения» и Примерной программы подготовки водителей категории «В».
                         </p>
 
                         <div class="flex flex-wrap gap-4 pt-2 text-xs text-slate-300">
-                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Учебный класс: ул. Ленина, 28 (49,7 м²)</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Класс: ул. Ленина, 28 (49,7 м²)</span>
                             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Автодром: ул. Советская, 245 Б (3 011 м²)</span>
                             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Автомобиль: LADA Kalina А665РТ172</span>
                         </div>
@@ -1079,11 +1096,11 @@
                 </div>
             </div>
 
-            <!-- Таблица юридических сведений и реквизитов -->
+            <!-- Официальные реквизиты -->
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-8">
-                    <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Юридическая прозрачность</span>
-                    <h3 class="text-2xl font-bold font-display text-brand-dark mt-1">Официальные сведения и реквизиты</h3>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Юридические данные</span>
+                    <h3 class="text-2xl font-bold font-display text-brand-dark mt-1">Реквизиты организации</h3>
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card">
@@ -1092,20 +1109,20 @@
                             <i class="fa-solid fa-scale-balanced text-brand-orange"></i>
                             Индивидуальный предприниматель Щучка Алексей Григорьевич
                         </span>
-                        <span class="text-xs text-brand-accent hidden sm:inline">Действующая организация</span>
+                        <span class="text-xs text-brand-accent hidden sm:inline">Действующая автошкола</span>
                     </div>
 
                     <div class="divide-y divide-slate-100 text-sm">
                         <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row justify-between sm:items-center gap-1 hover:bg-slate-50 transition-colors">
-                            <span class="text-slate-500 font-medium">Основной вид деятельности (ОКВЭД):</span>
+                            <span class="text-slate-500 font-medium">Основной вид деятельности:</span>
                             <span class="font-bold text-brand-dark text-right">85.42.1 Деятельность школ подготовки водителей автотранспортных средств</span>
                         </div>
 
                         <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row justify-between sm:items-center gap-1 hover:bg-slate-50 transition-colors">
                             <span class="text-slate-500 font-medium">ОГРНИП:</span>
                             <div class="flex items-center justify-end gap-2">
-                                <span class="font-bold text-brand-dark font-mono" id="ogrnipVal">326723200041412</span>
-                                <button onclick="copyToClipboard('326723200041412', 'ОГРНИП скопирован')" class="text-xs text-brand-orange hover:text-brand-orangeHover px-2 py-1 rounded bg-orange-50 border border-orange-100" title="Скопировать ОГРНИП">
+                                <span class="font-bold text-brand-dark font-mono">326723200041412</span>
+                                <button onclick="copyToClipboard('326723200041412', 'ОГРНИП скопирован')" class="text-xs text-brand-orange hover:text-brand-orangeHover px-2 py-1 rounded bg-orange-50 border border-orange-100" title="Скопировать">
                                     <i class="fa-regular fa-copy"></i>
                                 </button>
                             </div>
@@ -1114,20 +1131,20 @@
                         <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row justify-between sm:items-center gap-1 hover:bg-slate-50 transition-colors">
                             <span class="text-slate-500 font-medium">ИНН:</span>
                             <div class="flex items-center justify-end gap-2">
-                                <span class="font-bold text-brand-dark font-mono" id="innVal">720801856980</span>
-                                <button onclick="copyToClipboard('720801856980', 'ИНН скопирован')" class="text-xs text-brand-orange hover:text-brand-orangeHover px-2 py-1 rounded bg-orange-50 border border-orange-100" title="Скопировать ИНН">
+                                <span class="font-bold text-brand-dark font-mono">720801856980</span>
+                                <button onclick="copyToClipboard('720801856980', 'ИНН скопирован')" class="text-xs text-brand-orange hover:text-brand-orangeHover px-2 py-1 rounded bg-orange-50 border border-orange-100" title="Скопировать">
                                     <i class="fa-regular fa-copy"></i>
                                 </button>
                             </div>
                         </div>
 
                         <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row justify-between sm:items-center gap-1 hover:bg-slate-50 transition-colors">
-                            <span class="text-slate-500 font-medium">Дата государственной регистрации:</span>
+                            <span class="text-slate-500 font-medium">Дата регистрации:</span>
                             <span class="font-bold text-brand-dark text-right">15.04.2026 г.</span>
                         </div>
 
                         <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row justify-between sm:items-center gap-1 hover:bg-slate-50 transition-colors">
-                            <span class="text-slate-500 font-medium">Юридический адрес регистрации:</span>
+                            <span class="text-slate-500 font-medium">Юридический адрес:</span>
                             <span class="font-medium text-slate-800 text-right">627500, Тюменская обл., с. Большое Сорокино, ул. Зои Космодемьянской, д. 64</span>
                         </div>
 
@@ -1147,182 +1164,74 @@
         </div>
     </section>
 
-    <!-- ИНТЕРАКТИВНЫЙ МИНИ-КВИЗ ПО ПДД ДЛЯ КУРСАНТОВ -->
-    <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-10">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/20 px-3 py-1 rounded-full border border-brand-orange/30">
-                    Интерактив
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold font-display mt-2">
-                    Проверьте готовность к началу обучения
-                </h2>
-                <p class="text-slate-300 text-sm mt-2">
-                    Ответьте на один базовый вопрос дорожного движения и узнайте, как легко учиться с «Ре-Старт»!
-                </p>
-            </div>
-
-            <div class="bg-brand-navy/90 p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl" id="quizContainer">
-                <div class="text-xs uppercase font-bold text-brand-accent mb-2">Вопрос 1 из 1</div>
-                <div class="text-lg font-bold text-white mb-4">
-                    Что обязан сделать водитель перед началом движения или перестроением согласно разделу 8 ПДД?
-                </div>
-
-                <div class="space-y-3" id="quizOptions">
-                    <button onclick="handleQuizAnswer(false, this)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center justify-between">
-                        <span>Подать звуковой сигнал другим участникам движения</span>
-                        <i class="fa-regular fa-circle text-slate-400"></i>
-                    </button>
-                    <button onclick="handleQuizAnswer(true, this)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center justify-between">
-                        <span>Включить указатели поворота соответствующего направления и убедиться в безопасности</span>
-                        <i class="fa-regular fa-circle text-slate-400"></i>
-                    </button>
-                    <button onclick="handleQuizAnswer(false, this)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center justify-between">
-                        <span>Увеличить скорость движения</span>
-                        <i class="fa-regular fa-circle text-slate-400"></i>
-                    </button>
-                </div>
-
-                <div id="quizResult" class="mt-4 p-4 rounded-xl text-sm hidden"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- СЕКЦИЯ: ЭТАПЫ ОБУЧЕНИЯ -->
+    <!-- СЕКЦИЯ ЧАСТЫХ ВОПРОСОВ (FAQ) -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
-                    Пошаговый план
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
-                    Как проходит обучение: 4 простых шага к правам
-                </h2>
-                <p class="text-slate-600 mt-4 text-base">
-                    От первой заявки до получения заветного водительского удостоверения в ГИБДД
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-                <!-- Шаг 1 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
-                    <div class="w-10 h-10 rounded-xl bg-brand-orange text-white font-black flex items-center justify-center text-lg mb-4 shadow-md">
-                        1
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Запись и договор</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        Оставляете заявку, заключаем официальный договор с фиксацией цены и выбором удобного графика занятий.
-                    </p>
-                </div>
-
-                <!-- Шаг 2 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
-                    <div class="w-10 h-10 rounded-xl bg-brand-navy text-white font-black flex items-center justify-center text-lg mb-4 shadow-md">
-                        2
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Теория в классе</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        Разбор ПДД, устройства автомобиля, первой медицинской помощи и психологической подготовки в классе на ул. Ленина, 28.
-                    </p>
-                </div>
-
-                <!-- Шаг 3 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
-                    <div class="w-10 h-10 rounded-xl bg-brand-navy text-white font-black flex items-center justify-center text-lg mb-4 shadow-md">
-                        3
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Практика вождения</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        Отработка всех экзаменационных упражнений на закрытом автодроме 3011 м² и безопасный выезд на дороги.
-                    </p>
-                </div>
-
-                <!-- Шаг 4 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center text-lg mb-4 shadow-md">
-                        4
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Экзамен в ГИБДД</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        Организованная сдача экзамена на знакомом учебном авто LADA Kalina в сопровождении вашего инструктора!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- СЕКЦИЯ ВОПРОС-ОТВЕТ (FAQ) -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-                    Частые вопросы
+                    Вопросы и ответы
                 </span>
                 <h2 class="text-3xl font-extrabold text-brand-dark font-display mt-3">
-                    Ответы на популярные вопросы будущих курсантов
+                    Часто задаваемые вопросы
                 </h2>
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-brand-dark flex justify-between items-center hover:text-brand-orange transition-colors">
-                        <span>Со скольки лет можно учиться и сдавать на права категории «B»?</span>
+                        <span>Действительно ли в 55 000 ₽ входит бензин и автодром?</span>
                         <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
                     </button>
-                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
-                        Начать обучение в автошколе можно с 16 лет, сдавать экзамен в ГИБДД разрешено с 17 лет, а получить водительское удостоверение на руки — сразу при наступлении 18 лет.
+                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-200/60 pt-3">
+                        Да! Стоимость 55 000 рублей является окончательной и фиксируется в договоре. Вам не придется дополнительно оплачивать бензин, часы на автодроме или подачу машины на экзамен.
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-brand-dark flex justify-between items-center hover:text-brand-orange transition-colors">
-                        <span>Какие документы необходимы для записи в автошколу?</span>
+                        <span>Со скольки лет можно начинать учиться?</span>
                         <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
                     </button>
-                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
-                        Для заключения договора потребуются: паспорт гражданина РФ, СНИЛС, медицинская справка по форме 003-В/у (можно донести в процессе изучения теории) и 2 фотографии 3х4 см.
+                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-200/60 pt-3">
+                        Обучаться в автошколе можно с 16 лет, сдавать экзамен в ГИБДД разрешено с 17 лет, а получить водительские права на руки — в день 18-летия.
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-brand-dark flex justify-between items-center hover:text-brand-orange transition-colors">
-                        <span>Как работает рассрочка и есть ли скрытые проценты?</span>
+                        <span>Какие документы нужны для записи?</span>
                         <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
                     </button>
-                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
-                        Рассрочка внутренняя от автошколы ИП Щучка А. Г. без банков, переплат и комиссий. Оплата вносится частями в течение периода обучения, начиная с минимального первого взноса.
+                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-200/60 pt-3">
+                        Паспорт РФ, СНИЛС, медицинская водительская справка (форма № 003-В/у, её можно оформить в процессе изучения теории) и 2 матовые фотографии 3х4 см.
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-brand-dark flex justify-between items-center hover:text-brand-orange transition-colors">
-                        <span>На каком автомобиле проходит сдача экзамена?</span>
+                        <span>На каком авто сдаётся экзамен в ГИБДД?</span>
                         <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
                     </button>
-                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
-                        Экзамен сдается именно на том учебном автомобиле LADA Kalina, на котором вы проходили практическое обучение на нашем автодроме. Это гарантирует максимальную уверенность за рулём.
+                    <div class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-200/60 pt-3">
+                        Экзамен сдаётся на том же учебном автомобиле LADA KALINA (госномер А665РТ172), на котором вы тренируетесь на автодроме. Это исключает стресс от привыкания к незнакомой машине.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦИЯ КОНТАКТОВ И ФОРМЫ ЗАЯВКИ (Web3Forms API) -->
-    <section id="contact-form" class="py-20 bg-gradient-to-b from-slate-50 to-slate-100 border-t border-slate-200">
+    <!-- СЕКЦИЯ ФОРМЫ ЗАЯВКИ И КОНТАКТОВ -->
+    <section id="contact-form" class="py-20 bg-gradient-to-b from-slate-100 to-slate-200 border-t border-slate-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
-                    Онлайн-запись
+                    Запись на курс
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-display mt-3">
-                    Запишитесь на обучение или получите консультацию
+                    Забронируйте место в ближайшей группе
                 </h2>
                 <p class="text-slate-600 mt-4 text-base">
-                    Оставьте контактные данные — Алексей Григорьевич лично свяжется с вами, ответит на все вопросы и забронирует место в ближайшей группе.
+                    Оставьте контактные данные — Алексей Григорьевич свяжется с вами, подробно проконсультирует и закрепит за вами место по фиксированной цене 55 000 ₽.
                 </p>
             </div>
 
@@ -1331,24 +1240,23 @@
                 <!-- Форма отправки Web3Forms -->
                 <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-xl relative">
                     
-                    <!-- Сообщение об успешной отправке (Скрыто по умолчанию) -->
+                    <!-- Уведомление об успехе (Скрыто до отправки) -->
                     <div id="formSuccessMessage" class="hidden absolute inset-0 bg-white/98 rounded-3xl z-20 flex flex-col items-center justify-center p-8 text-center space-y-4">
                         <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl shadow-inner animate-bounce">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-dark font-display">Заявка успешно отправлена!</h3>
                         <p class="text-slate-600 text-sm max-w-md">
-                            Спасибо за обращение в автошколу «Ре-Старт». Мы свяжемся с вами в течение рабочего времени для согласования деталей обучения.
+                            Спасибо за доверие к автошколе «Ре-Старт». Мы перезвоним вам в ближайшее рабочее время для согласования деталей.
                         </p>
                         <button onclick="resetWebForm()" class="px-6 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-dark text-white font-bold text-xs transition-all">
-                            Отправить ещё одну заявку
+                            Отправить новую заявку
                         </button>
                     </div>
 
                     <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-                        <!-- Ключ Web3Forms из вашего исходного сайта -->
                         <input type="hidden" name="access_key" value="c1634d1f-f2e6-462e-a952-29b9d3cb3cec">
-                        <input type="hidden" name="subject" value="Новая заявка с сайта Автошколы Ре-Старт">
+                        <input type="hidden" name="subject" value="Заявка с сайта Автошколы Ре-Старт (55 000 руб)">
                         <input type="hidden" name="from_name" value="Автошкола Ре-Старт (ИП Щучка)">
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -1375,15 +1283,14 @@
 
                         <div>
                             <label for="formCourse" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                                Интересующая программа
+                                Программа обучения
                             </label>
                             <div class="relative">
                                 <i class="fa-solid fa-graduation-cap absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
                                 <select name="Курс" id="formCourse" class="w-full pl-11 pr-10 py-3.5 rounded-xl border border-slate-300 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none text-sm appearance-none bg-white transition-all cursor-pointer">
-                                    <option value="Категория B (Полный курс)">Подготовка водителей (Категория B) — Полный курс</option>
+                                    <option value="Подготовка водителей (Категория B) — 55 000 ₽">Подготовка водителей (Категория B) — 55 000 ₽ (Единый платёж)</option>
                                     <option value="Восстановление навыков вождения">Восстановление навыков вождения (Индивидуально)</option>
                                     <option value="Подготовка к экзаменам в ГИБДД">Подготовка к сдаче экзаменов в ГИБДД (Интенсив)</option>
-                                    <option value="Консультация по рассрочке">Индивидуальная консультация по обучению и рассрочке</option>
                                 </select>
                                 <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-xs"></i>
                             </div>
@@ -1391,49 +1298,47 @@
 
                         <div>
                             <label for="formMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                                Ваш вопрос или комментарий (необязательно)
+                                Комментарий или вопрос (необязательно)
                             </label>
-                            <textarea name="Сообщение" id="formMessage" rows="3" placeholder="Удобное время для звонка, опыт вождения или любые уточнения..." class="w-full p-4 rounded-xl border border-slate-300 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none text-sm transition-all resize-none"></textarea>
+                            <textarea name="Сообщение" id="formMessage" rows="3" placeholder="Удобное время для звонка или дополнительные вопросы..." class="w-full p-4 rounded-xl border border-slate-300 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none text-sm transition-all resize-none"></textarea>
                         </div>
 
                         <div class="text-xs text-slate-500 flex items-start gap-2">
                             <i class="fa-solid fa-lock text-brand-orange mt-0.5"></i>
-                            <span>Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Конфиденциальность гарантируется.</span>
+                            <span>Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных. Конфиденциальность гарантируется.</span>
                         </div>
 
                         <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-xl font-extrabold text-base bg-gradient-to-r from-brand-orange to-brand-accent hover:from-brand-orangeHover hover:to-brand-orange text-white shadow-glow transition-all flex items-center justify-center gap-2">
-                            <span id="btnText">Записаться на обучение</span>
+                            <span id="btnText">Записаться за 55 000 ₽</span>
                             <i class="fa-solid fa-arrow-right text-sm" id="btnIcon"></i>
                         </button>
                     </form>
                 </div>
 
-                <!-- Контактная карточка и адреса -->
+                <!-- Контакты и адреса -->
                 <div id="contacts" class="lg:col-span-5 bg-gradient-to-br from-brand-dark via-brand-navy to-brand-surface rounded-3xl p-8 sm:p-10 text-white shadow-2xl flex flex-col justify-between border border-white/10">
                     <div class="space-y-6">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Прямая связь</span>
-                            <h3 class="text-2xl font-bold font-display mt-1">Контакты автошколы</h3>
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Прямые контакты</span>
+                            <h3 class="text-2xl font-bold font-display mt-1">Автошкола «Ре-Старт»</h3>
                             <p class="text-slate-300 text-xs mt-1">ИП Щучка Алексей Григорьевич</p>
                         </div>
 
                         <div class="space-y-4 text-sm">
-                            <!-- Адрес класса -->
-                            <div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
                                 <div class="w-9 h-9 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-chalkboard-user"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs font-bold text-slate-400 uppercase">Учебный кабинет (Теория):</div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase">Учебный класс (Теория):</div>
                                     <div class="font-semibold text-white">627500, с. Большое Сорокино, ул. Ленина, д. 28 (2 этаж)</div>
                                     <a href="https://yandex.ru/maps/?text=Тюменская+область+Большое+Сорокино+Ленина+28" target="_blank" class="text-xs text-brand-accent hover:underline inline-block mt-1">
-                                        Открыть в Яндекс.Картах &rarr;
+                                        Открыть на Яндекс.Картах &rarr;
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- Адрес автодрома -->
-                            <div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
                                 <div class="w-9 h-9 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-road"></i>
                                 </div>
@@ -1441,13 +1346,12 @@
                                     <div class="text-xs font-bold text-slate-400 uppercase">Закрытый автодром (Практика):</div>
                                     <div class="font-semibold text-white">с. Большое Сорокино, ул. Советская, д. 245 Б (3 011 м²)</div>
                                     <a href="https://yandex.ru/maps/?text=Тюменская+область+Большое+Сорокино+Советская+245Б" target="_blank" class="text-xs text-brand-accent hover:underline inline-block mt-1">
-                                        Открыть в Яндекс.Картах &rarr;
+                                        Открыть на Яндекс.Картах &rarr;
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- Email -->
-                            <div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
                                 <div class="w-9 h-9 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
@@ -1459,22 +1363,20 @@
                                 </div>
                             </div>
 
-                            <!-- График работы -->
-                            <div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/5 border border-white/10">
                                 <div class="w-9 h-9 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-clock"></i>
                                 </div>
                                 <div>
                                     <div class="text-xs font-bold text-slate-400 uppercase">График работы:</div>
                                     <div class="font-semibold text-white">Пн — Пт: с 09:00 до 18:00</div>
-                                    <div class="text-xs text-slate-300">Занятия по вождению — по индивидуальному графику</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-                        <span>Официальный сайт: http://ip-shuchka-re-start.ru</span>
+                        <span>http://ip-shuchka-re-start.ru</span>
                         <span class="text-brand-orange font-semibold">Тюменская область</span>
                     </div>
                 </div>
@@ -1488,7 +1390,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-white/10">
                 
-                <!-- Логотип и правообладатель -->
                 <div class="md:col-span-5 space-y-3">
                     <div class="inline-block bg-white p-2 rounded-xl">
                         <img src="logo.jpg" alt="Ре-Старт" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/160x50/0b2038/ffffff?text=Ре-Старт';">
@@ -1497,30 +1398,28 @@
                         Автошкола «Ре-Старт» — ИП Щучка Алексей Григорьевич
                     </p>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        ОГРНИП: 326723200041412 (от 15.04.2026 г.) • ИНН: 720801856980 <br>
-                        Деятельность школ подготовки водителей автотранспортных средств (ОКВЭД 85.42.1)
+                        ОГРНИП: 326723200041412 • ИНН: 720801856980 <br>
+                        ОКВЭД 85.42.1 Деятельность школ подготовки водителей
                     </p>
                 </div>
 
-                <!-- Ссылки -->
                 <div class="md:col-span-4 space-y-2">
-                    <div class="font-bold text-white uppercase tracking-wider text-xs mb-3">Быстрая навигация:</div>
+                    <div class="font-bold text-white uppercase tracking-wider text-xs mb-3">Навигация:</div>
                     <div class="flex flex-col space-y-1.5 text-xs">
-                        <a href="#advantages" class="hover:text-brand-orange transition-colors">Преимущества обучения</a>
-                        <a href="#courses" class="hover:text-brand-orange transition-colors">Программы категории «В»</a>
-                        <a href="#base" class="hover:text-brand-orange transition-colors">Учебный кабинет и автодром 3 011 м²</a>
+                        <a href="#pricing" class="hover:text-brand-orange transition-colors">Стоимость: 55 000 ₽ всё включено</a>
+                        <a href="#base" class="hover:text-brand-orange transition-colors">Автодром 3 011 м² и класс</a>
+                        <a href="#teachers" class="hover:text-brand-orange transition-colors">Преподаватели и мастера</a>
                         <a href="#documents" class="hover:text-brand-orange transition-colors">Акт обследования базы 2026 (PDF)</a>
                     </div>
                 </div>
 
-                <!-- Кнопки действий -->
                 <div class="md:col-span-3 flex flex-col gap-2.5">
                     <button onclick="openPdfModal()" class="w-full py-2.5 px-4 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors flex items-center justify-center gap-2">
                         <i class="fa-solid fa-file-pdf text-brand-orange"></i>
                         <span>Смотреть Акт онлайн</span>
                     </button>
                     <a href="#contact-form" class="w-full py-2.5 px-4 rounded-lg bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs text-center transition-colors">
-                        Записаться в группу
+                        Записаться за 55 000 ₽
                     </a>
                 </div>
 
@@ -1537,25 +1436,22 @@
         </div>
     </footer>
 
-    <!-- ПЛАВАЮЩИЙ ВИДЖЕТ БЫСТРОЙ СВЯЗИ -->
+    <!-- ПЛАВАЮЩИЕ КНОПКИ -->
     <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
-        <!-- Кнопка наверх -->
-        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hidden w-11 h-11 rounded-full bg-brand-dark/90 hover:bg-brand-navy text-white shadow-xl items-center justify-center transition-all border border-white/20 text-sm">
+        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hidden w-11 h-11 rounded-full bg-brand-dark hover:bg-brand-navy text-white shadow-xl items-center justify-center transition-all border border-white/20 text-sm">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
 
-        <!-- Кнопка быстрой записи -->
         <a href="#contact-form" class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-brand-orange to-brand-accent text-white shadow-glow hover:scale-105 transition-all text-xs font-bold">
             <i class="fa-solid fa-car-side text-base"></i>
-            <span class="hidden sm:inline">Запись в группу</span>
+            <span class="hidden sm:inline">Запись • 55 000 ₽</span>
         </a>
     </div>
 
-    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПРОСМОТРА PDF АКТА ОБСЛЕДОВАНИЯ -->
-    <div id="pdfModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 transition-opacity">
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПРОСМОТРА PDF АКТА -->
+    <div id="pdfModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 transition-opacity">
         <div class="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl flex flex-col max-h-[92vh] overflow-hidden border border-slate-200">
             
-            <!-- Шапка модального окна -->
             <div class="p-4 sm:px-6 bg-brand-dark text-white flex items-center justify-between border-b border-white/10 shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
@@ -1568,9 +1464,9 @@
                 </div>
 
                 <div class="flex items-center gap-2">
-                    <a href="Akt_samoobsledovania_2026_Sorokino.pdf" download="Akt_samoobsledovania_2026_Sorokino.pdf" class="px-3 py-1.5 rounded-lg bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold flex items-center gap-1.5 transition-colors" title="Скачать файл PDF">
+                    <a href="Akt_samoobsledovania_2026_Sorokino.pdf" download="Akt_samoobsledovania_2026_Sorokino.pdf" class="px-3 py-1.5 rounded-lg bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
                         <i class="fa-solid fa-download"></i>
-                        <span class="hidden sm:inline">Скачать</span>
+                        <span class="hidden sm:inline">Скачать PDF</span>
                     </a>
                     <button onclick="closePdfModal()" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors text-sm" aria-label="Закрыть">
                         <i class="fa-solid fa-xmark"></i>
@@ -1578,16 +1474,14 @@
                 </div>
             </div>
 
-            <!-- Тело модалки с iframe -->
             <div class="relative flex-1 bg-slate-900 min-h-[500px]">
                 <iframe id="pdfIframe" src="" class="w-full h-full border-0 absolute inset-0" title="Акт обследования 2026"></iframe>
                 
-                <!-- Запасное сообщение, если браузер блокирует встроенный просмотр PDF -->
                 <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white pointer-events-none -z-0">
                     <i class="fa-regular fa-file-pdf text-5xl text-brand-orange mb-3"></i>
                     <p class="text-base font-bold">Загрузка официального документа...</p>
                     <p class="text-xs text-slate-300 max-w-sm mt-1">
-                        Если документ не отобразился автоматически, вы можете открыть его напрямую или скачать.
+                        Если ваш браузер блокирует встроенный просмотр, откройте документ напрямую:
                     </p>
                     <a href="Akt_samoobsledovania_2026_Sorokino.pdf" target="_blank" class="mt-4 pointer-events-auto px-4 py-2 bg-brand-orange text-white text-xs font-bold rounded-lg shadow">
                         Открыть PDF в новой вкладке
@@ -1595,27 +1489,26 @@
                 </div>
             </div>
 
-            <!-- Подвал модалки с ключевыми выводами акта -->
             <div class="p-3 sm:px-6 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 flex flex-wrap items-center justify-between gap-3 shrink-0">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-circle-check text-emerald-600"></i>
-                    <span class="font-semibold text-slate-800">Вывод Акта: База полностью соответствует Федеральному закону № 196-ФЗ</span>
+                    <span class="font-semibold text-slate-800">Заключение: База полностью соответствует Федеральному закону № 196-ФЗ</span>
                 </div>
                 <div class="text-[11px] text-slate-500">
-                    Учебный класс (49.7 м²) • Автодром (3 011 м²) • LADA Kalina
+                    Класс 49.7 м² • Автодром 3 011 м² • LADA Kalina А665РТ172
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- ТОСТ-УВЕДОМЛЕНИЕ (Для копирования реквизитов) -->
+    <!-- ТОСТ-УВЕДОМЛЕНИЕ -->
     <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-brand-dark text-white px-5 py-2.5 rounded-full shadow-2xl text-xs font-bold border border-white/20 transition-all flex items-center gap-2">
         <i class="fa-solid fa-circle-check text-emerald-400"></i>
-        <span id="toastText">Скопировано в буфер обмена</span>
+        <span id="toastText">Скопировано в буфер</span>
     </div>
 
-    <!-- JAVASCRIPT ЛОГИКА И ИНТЕРАКТИВНОСТЬ -->
+    <!-- СКРИПТЫ -->
     <script>
         // Мобильное меню
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1641,7 +1534,7 @@
             menuIcon.classList.add('fa-bars');
         }
 
-        // Кнопка Наверх
+        // Кнопка наверх
         const backToTopBtn = document.getElementById('backToTopBtn');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 400) {
@@ -1669,37 +1562,31 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Закрытие модалки по клику вне окна
         pdfModal.addEventListener('click', (e) => {
-            if (e.target === pdfModal) {
-                closePdfModal();
-            }
+            if (e.target === pdfModal) closePdfModal();
         });
 
-        // Закрытие по ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !pdfModal.classList.contains('hidden')) {
                 closePdfModal();
             }
         });
 
-        // Вкладки материально-технической базы
+        // Вкладки базы
         function switchBaseTab(tabId) {
             document.querySelectorAll('.base-tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active', 'bg-brand-navy', 'text-white', 'shadow-md');
-                btn.classList.add('bg-slate-100', 'text-slate-700');
+                btn.classList.add('bg-white', 'text-slate-700');
             });
 
             const targetContent = document.getElementById(tabId);
-            if (targetContent) {
-                targetContent.classList.remove('hidden');
-            }
+            if (targetContent) targetContent.classList.remove('hidden');
 
             const activeBtn = document.getElementById('btn-' + tabId);
             if (activeBtn) {
                 activeBtn.classList.add('active', 'bg-brand-navy', 'text-white', 'shadow-md');
-                activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
+                activeBtn.classList.remove('bg-white', 'text-slate-700');
             }
         }
 
@@ -1708,9 +1595,6 @@
             const content = btn.nextElementSibling;
             const icon = btn.querySelector('.fa-chevron-down');
             const isHidden = content.classList.contains('hidden');
-
-            // Свернуть остальные
-            document.querySelectorAll('#faq .hidden').forEach(el => el.classList.add('hidden'));
 
             if (isHidden) {
                 content.classList.remove('hidden');
@@ -1721,7 +1605,7 @@
             }
         }
 
-        // Выбор курса из карточек программ в форму
+        // Выбор курса из карточек
         function selectCourse(courseName) {
             const selectEl = document.getElementById('formCourse');
             if (selectEl) {
@@ -1734,38 +1618,7 @@
             }
         }
 
-        // Калькулятор стоимости и рассрочки
-        let currentCalcPrice = 32000;
-
-        function setCalcCourse(type, price) {
-            currentCalcPrice = price;
-            document.querySelectorAll('.calc-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-orange', 'text-white', 'border-brand-orange');
-                btn.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
-            });
-
-            const activeBtn = event.currentTarget;
-            activeBtn.classList.add('bg-brand-orange', 'text-white', 'border-brand-orange');
-            activeBtn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
-
-            updateCalculator();
-        }
-
-        function updateCalculator() {
-            const months = parseInt(document.getElementById('calcMonthsInput').value, 10);
-            const monthsDisplay = document.getElementById('calcMonthsDisplay');
-            const monthlyPaymentDisplay = document.getElementById('monthlyPaymentDisplay');
-
-            let word = 'месяцев';
-            if (months === 1) word = 'месяц';
-            else if (months >= 2 && months <= 4) word = 'месяца';
-
-            monthsDisplay.innerText = `${months} ${word}`;
-            const perMonth = Math.round(currentCalcPrice / months);
-            monthlyPaymentDisplay.innerText = `~${perMonth.toLocaleString('ru-RU')} ₽/мес`;
-        }
-
-        // Копирование в буфер обмена
+        // Копирование в буфер
         function copyToClipboard(text, message) {
             const textarea = document.createElement('textarea');
             textarea.value = text;
@@ -1777,7 +1630,7 @@
                 document.execCommand('copy');
                 showToast(message);
             } catch (err) {
-                console.error('Ошибка копирования:', err);
+                console.error(err);
             }
             document.body.removeChild(textarea);
         }
@@ -1792,28 +1645,7 @@
             }, 2500);
         }
 
-        // Интерактивный мини-квиз
-        function handleQuizAnswer(isCorrect, btn) {
-            const resultBox = document.getElementById('quizResult');
-            const buttons = document.querySelectorAll('#quizOptions button');
-            
-            buttons.forEach(b => {
-                b.disabled = true;
-                b.classList.remove('border-white/10');
-            });
-
-            if (isCorrect) {
-                btn.classList.add('bg-emerald-600/30', 'border-emerald-500', 'text-white');
-                resultBox.className = 'mt-4 p-4 rounded-xl text-sm bg-emerald-500/20 border border-emerald-500 text-emerald-200 block';
-                resultBox.innerHTML = '<strong>Верно! Отличный старт!</strong> Подача сигнала световым указателем поворота обязательна перед любым началом движения и перестроением. В автошколе «Ре-Старт» мы доводим соблюдение всех нюансов ПДД до уверенного автоматизма!';
-            } else {
-                btn.classList.add('bg-rose-600/30', 'border-rose-500', 'text-white');
-                resultBox.className = 'mt-4 p-4 rounded-xl text-sm bg-rose-500/20 border border-rose-500 text-rose-200 block';
-                resultBox.innerHTML = '<strong>Пока не совсем точно.</strong> Правильный ответ: обязательно заблаговременно включить указатели поворота соответствующего направления. Ничего страшного — на занятиях с нашими опытными преподавателями вы с легкостью освоите все дорожные ситуации!';
-            }
-        }
-
-        // Асинхронная отправка формы Web3Forms без перезагрузки
+        // Отправка формы без перезагрузки (Web3Forms AJAX)
         const leadForm = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const btnText = document.getElementById('btnText');
@@ -1834,20 +1666,19 @@
                 body: formData
             })
             .then(async (response) => {
-                const json = await response.json();
                 if (response.status === 200) {
                     formSuccessMessage.classList.remove('hidden');
                     leadForm.reset();
                 } else {
-                    alert('Произошла ошибка при отправке. Пожалуйста, напишите нам на почту a.shchuchka@mail.ru');
+                    alert('Не удалось отправить форму. Напишите нам на почту a.shchuchka@mail.ru');
                 }
             })
             .catch((error) => {
                 console.error(error);
-                alert('Произошла ошибка связи. Пожалуйста, позвоните нам или напишите на a.shchuchka@mail.ru');
+                alert('Ошибка соединения. Пожалуйста, напишите нам на a.shchuchka@mail.ru');
             })
             .finally(() => {
-                btnText.innerText = 'Записаться на обучение';
+                btnText.innerText = 'Записаться за 55 000 ₽';
                 btnIcon.className = 'fa-solid fa-arrow-right text-sm';
                 submitBtn.disabled = false;
             });
