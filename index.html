@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автошкола «Ре-Старт» | Инновационное обучение вождению</title>
-    <meta name="description" content="Официальная автошкола «Ре-Старт» в с. Большое Сорокино. Инновационный подход, собственный автодром, 55 000 руб всё включено. Без скрытых платежей.">
+    <title>Автошкола «Ре-Старт» | Официальное обучение категории B</title>
+    <meta name="description" content="Автошкола «Ре-Старт» ИП Щучка А. Г. в с. Большое Сорокино. Собственный автодром 3 011 кв.м, 195 часов подготовки, программа согласована с ОГИБДД. Честная цена 55 000 руб всё включено.">
     
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #001a33;
-            --primary-dark: #000d1a;
-            --primary-light: #002b5e;
-            --accent: #ff4400;
-            --accent-hover: #e03c00;
-            --accent-glow: rgba(255, 68, 0, 0.4);
-            --dark: #0a0f18;
-            --text: #334155;
-            --muted: #64748b;
-            --bg: #f4f7f9;
-            --card: #ffffff;
-            --border: #e2e8f0;
-            --radius-sm: 12px;
-            --radius: 20px;
-            --radius-lg: 32px;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --bg-dark: #070c16;
+            --bg-surface: #0e1726;
+            --bg-card: rgba(18, 29, 48, 0.75);
+            --primary-accent: #ff5500;
+            --primary-hover: #ff6f26;
+            --primary-glow: rgba(255, 85, 0, 0.35);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(255, 85, 0, 0.4);
+            --success: #10b981;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --radius-xl: 36px;
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
@@ -40,7 +38,7 @@
 
         h1, h2, h3, h4, .brand-font {
             font-family: 'Unbounded', sans-serif;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
         }
 
         html {
@@ -48,52 +46,40 @@
         }
 
         body {
-            color: var(--text);
-            background-color: var(--bg);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Кастомный скроллбар */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-accent); }
 
         .container {
-            max-width: 1280px;
+            max-width: 1240px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Анимации при скролле */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Шапка (Glassmorphism) */
+        /* Навигация */
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-            transition: var(--transition);
+            background: rgba(7, 12, 22, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-subtle);
         }
 
         .nav-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 90px;
+            height: 86px;
         }
 
         .logo-block {
@@ -104,8 +90,10 @@
         }
 
         .logo-img {
-            height: 50px;
+            height: 52px;
+            width: auto;
             border-radius: 10px;
+            border: 1px solid var(--border-subtle);
         }
 
         .logo-text-group {
@@ -116,819 +104,1511 @@
         .logo-name {
             font-size: 1.3rem;
             font-weight: 900;
-            color: var(--primary);
+            color: #ffffff;
             line-height: 1;
-            text-transform: uppercase;
+            letter-spacing: -0.01em;
         }
 
         .logo-tag {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 0.1em;
+            color: var(--primary-accent);
             text-transform: uppercase;
-            margin-top: 4px;
+            letter-spacing: 0.08em;
+            margin-top: 3px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 30px;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--dark);
+            color: #cbd5e1;
             font-weight: 600;
-            font-size: 0.95rem;
-            position: relative;
-            padding: 8px 0;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
+            font-size: 0.92rem;
             transition: var(--transition);
         }
 
-        nav a:hover::after { width: 100%; }
-        nav a:hover { color: var(--accent); }
+        nav a:hover {
+            color: var(--primary-accent);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .price-badge-nav {
+            background: rgba(255, 85, 0, 0.12);
+            color: #ff8547;
+            padding: 7px 16px;
+            border-radius: 40px;
+            font-size: 0.84rem;
+            font-weight: 800;
+            border: 1px solid rgba(255, 85, 0, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .price-badge-nav::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--primary-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-accent);
+        }
 
         .btn-header {
-            background-color: var(--primary);
-            color: white;
-            padding: 14px 28px;
+            background-color: var(--primary-accent);
+            color: #ffffff;
+            padding: 12px 24px;
             border-radius: 12px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-weight: 800;
+            font-size: 0.92rem;
             transition: var(--transition);
-            box-shadow: 0 8px 20px rgba(0, 26, 51, 0.2);
+            box-shadow: 0 4px 20px var(--primary-glow);
         }
 
         .btn-header:hover {
-            background-color: var(--accent);
+            background-color: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px var(--accent-glow);
+            box-shadow: 0 8px 26px var(--primary-glow);
         }
 
-        /* Главный экран (Hero) */
+        /* Главный экран */
         .hero {
             position: relative;
-            background: #000;
-            color: white;
-            padding: 120px 0 140px;
+            padding: 100px 0 120px;
             overflow: hidden;
-            z-index: 1;
-        }
-
-        .hero-video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0,26,51,0.95) 0%, rgba(0,0,0,0.8) 100%), 
-                        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80') center/cover;
-            z-index: -1;
-            transform: scale(1.05);
-            animation: slowZoom 20s infinite alternate linear;
-        }
-
-        @keyframes slowZoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
+            background: radial-gradient(circle at top right, rgba(255, 85, 0, 0.12), transparent 45%),
+                        radial-gradient(circle at bottom left, rgba(14, 23, 38, 0.9), transparent 60%);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 60px;
+            grid-template-columns: 1.25fr 0.95fr;
+            gap: 48px;
             align-items: center;
         }
 
-        .hero-badge {
+        .pill-badge {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            padding: 8px 18px;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            color: #fff;
+            color: #e2e8f0;
             margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.1rem;
             font-weight: 900;
-            line-height: 1.1;
+            line-height: 1.14;
             margin-bottom: 24px;
+            color: #ffffff;
         }
 
         .hero h1 span {
-            color: var(--accent);
-            position: relative;
-            display: inline-block;
+            color: var(--primary-accent);
+            text-shadow: 0 0 30px var(--primary-glow);
         }
 
-        .hero h1 span::after {
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 620px;
+        }
+
+        .hero-stats-deck {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .h-stat {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-subtle);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .h-stat::after {
             content: '';
             position: absolute;
-            bottom: 5px;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 8px;
-            background: var(--accent);
-            opacity: 0.3;
-            border-radius: 4px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), transparent);
         }
 
-        .hero-sub {
-            font-size: 1.15rem;
-            color: #94a3b8;
-            margin-bottom: 40px;
-            line-height: 1.7;
-            max-width: 600px;
+        .h-stat-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'Unbounded', sans-serif;
+            color: #ffffff;
+            line-height: 1.1;
         }
 
-        .btn-main {
-            background-color: var(--accent);
-            color: white;
+        .h-stat-num span { color: var(--primary-accent); }
+
+        .h-stat-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-top: 6px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn-glow {
+            background-color: var(--primary-accent);
+            color: #ffffff;
             padding: 18px 40px;
             border-radius: 14px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px var(--primary-glow);
             border: none;
             cursor: pointer;
-            box-shadow: 0 12px 30px var(--accent-glow);
         }
 
-        .btn-main:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(255, 68, 0, 0.5);
+        .btn-glow:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 85, 0, 0.5);
         }
 
-        /* Интерактивная карточка в Hero */
-        .glass-card {
+        .btn-glass {
             background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            padding: 18px 30px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.98rem;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Визитка тарифа в Hero */
+        .hero-tariff-card {
+            background: var(--bg-card);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-active);
+            border-radius: var(--radius-xl);
             padding: 40px;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: var(--transition);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
 
-        .glass-card:hover {
-            transform: perspective(1000px) rotateY(0deg) translateY(-10px);
-            border-color: rgba(255, 68, 0, 0.4);
+        .tariff-tag {
+            display: inline-block;
+            background: rgba(255, 85, 0, 0.15);
+            color: #ff8547;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
         }
 
-        .glass-price {
+        .tariff-sum {
             font-size: 3.5rem;
             font-weight: 900;
-            color: #fff;
             font-family: 'Unbounded', sans-serif;
-            margin-bottom: 5px;
+            color: #ffffff;
             line-height: 1;
+            margin-bottom: 8px;
         }
 
-        .glass-price span { font-size: 1.5rem; color: var(--accent); }
-        .glass-sub { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
-        
-        .glass-list { list-style: none; margin-bottom: 30px; }
-        .glass-list li {
+        .tariff-sum span {
+            font-size: 1.8rem;
+            color: var(--primary-accent);
+        }
+
+        .tariff-policy {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 26px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .tariff-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .tariff-features li {
             display: flex;
             align-items: center;
             gap: 12px;
+            font-size: 0.94rem;
             color: #e2e8f0;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        .glass-list li i {
-            color: var(--accent);
-            font-size: 1.2rem;
-            font-weight: 900;
         }
 
-        /* Общие секции */
-        .section-padding { padding: 110px 0; }
-        
+        .chk {
+            width: 20px;
+            height: 20px;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        /* Интерактивный симулятор реакции водителя */
+        .reaction-section {
+            padding: 50px 0;
+        }
+
+        .reaction-box {
+            background: linear-gradient(135deg, rgba(14, 23, 38, 0.8), rgba(20, 32, 54, 0.9));
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .reaction-desc h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .reaction-desc p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .reaction-game {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: var(--transition);
+        }
+
+        .reaction-signal {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ef4444;
+            margin: 0 auto 16px;
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.5);
+            transition: var(--transition);
+        }
+
+        .reaction-signal.green {
+            background: #10b981;
+            box-shadow: 0 0 35px rgba(16, 185, 129, 0.9);
+        }
+
+        .reaction-state-text {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #ffffff;
+            font-family: 'Unbounded', sans-serif;
+            margin-bottom: 6px;
+        }
+
+        .reaction-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Интерактивная карта пути курсанта (Tabs Roadmap) */
+        .roadmap-section {
+            padding: 90px 0;
+        }
+
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 780px;
             margin: 0 auto 60px;
         }
 
-        .section-tag {
-            display: inline-block;
-            background: rgba(255, 68, 0, 0.1);
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
+        .sec-tag {
+            color: var(--primary-accent);
+            font-size: 0.84rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 16px;
+            letter-spacing: 1.4px;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
-        .section-title {
-            font-size: 2.8rem;
-            color: var(--primary);
-            margin-bottom: 16px;
-            line-height: 1.2;
+        .sec-title {
+            font-size: 2.4rem;
+            color: #ffffff;
+            line-height: 1.25;
         }
 
-        /* Интерактивный Квиз (Новая фишка) */
-        .quiz-section {
-            background: var(--primary);
-            color: white;
-            border-radius: var(--radius-lg);
-            padding: 80px 60px;
-            margin: 60px 0;
-            box-shadow: 0 20px 50px rgba(0, 26, 51, 0.3);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .sec-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-top: 14px;
         }
 
-        .quiz-section::before {
-            content: '';
-            position: absolute;
-            top: -50%; right: -20%;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(255,68,0,0.2) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .quiz-step { display: none; animation: fadeIn 0.5s ease; }
-        .quiz-step.active { display: block; }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .quiz-question {
-            font-size: 2rem;
-            font-weight: 800;
-            font-family: 'Unbounded', sans-serif;
-            margin-bottom: 40px;
-        }
-
-        .quiz-options {
+        .steps-nav {
             display: flex;
+            gap: 12px;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 36px;
         }
 
-        .quiz-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 1.1rem;
+        .step-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.92rem;
             font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
         }
 
-        .quiz-btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            transform: translateY(-3px);
+        .step-btn.active, .step-btn:hover {
+            background: var(--primary-accent);
+            border-color: var(--primary-accent);
+            color: #ffffff;
+            box-shadow: 0 6px 20px var(--primary-glow);
         }
 
-        /* Секция Документов */
+        .step-pane {
+            display: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            backdrop-filter: blur(16px);
+            animation: fadeInPane 0.4s ease forwards;
+        }
+
+        .step-pane.active {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 36px;
+            align-items: center;
+        }
+
+        @keyframes fadeInPane {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-content h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .step-specs {
+            display: flex;
+            gap: 16px;
+        }
+
+        .step-spec-box {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-subtle);
+            padding: 12px 18px;
+            border-radius: var(--radius-md);
+        }
+
+        .spec-val {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-accent);
+            font-family: 'Unbounded', sans-serif;
+        }
+
+        .spec-lbl {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Центр официальных документов */
+        .docs-section {
+            padding: 90px 0;
+            background: rgba(14, 23, 38, 0.4);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
         .docs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 28px;
         }
 
         .doc-card {
-            background: var(--card);
-            border-radius: var(--radius);
-            padding: 40px 30px;
-            border: 1px solid var(--border);
-            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 34px;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
             transition: var(--transition);
             position: relative;
-            z-index: 1;
-        }
-
-        .doc-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, transparent 0%, rgba(255,68,0,0.03) 100%);
-            border-radius: var(--radius);
-            z-index: -1;
-            opacity: 0;
-            transition: var(--transition);
         }
 
         .doc-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(255, 68, 0, 0.3);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transform: translateY(-6px);
+            border-color: var(--border-active);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
-        .doc-card:hover::before { opacity: 1; }
+
+        .doc-card.primary-doc {
+            border: 2px solid var(--primary-accent);
+        }
+
+        .doc-chip {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 85, 0, 0.15);
+            color: #ff8547;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
 
         .doc-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--bg);
-            color: var(--accent);
-            border-radius: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary-accent);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 20px;
-            transition: var(--transition);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
         }
 
-        .doc-card:hover .doc-icon {
-            background: var(--accent);
-            color: white;
-            transform: rotate(-10deg) scale(1.1);
-        }
-
-        .doc-card h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 12px; }
-        .doc-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 24px; }
-        
-        .doc-actions { display: flex; gap: 10px; justify-content: center; }
-        .btn-doc { padding: 10px 20px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; transition: var(--transition); text-decoration: none;}
-        .btn-doc-view { background: var(--primary); color: white; }
-        .btn-doc-view:hover { background: var(--primary-light); }
-        .btn-doc-dl { background: var(--bg); color: var(--primary); }
-        .btn-doc-dl:hover { background: var(--border); }
-
-        /* Обучение и База */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: var(--card);
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary-light);
-            box-shadow: var(--shadow);
-        }
-
-        .f-num {
-            font-size: 4rem;
-            font-family: 'Unbounded', sans-serif;
-            font-weight: 900;
-            color: rgba(0, 26, 51, 0.04);
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            line-height: 1;
-            transition: var(--transition);
-        }
-        .feature-card:hover .f-num { color: rgba(255, 68, 0, 0.1); transform: scale(1.1); }
-
-        .feature-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 16px; position: relative; z-index: 2; }
-        .feature-card p { color: var(--muted); font-size: 0.95rem; position: relative; z-index: 2; }
-
-        /* Онлайн теория (БЕЗ PROFTEH) */
-        .online-portal {
-            background: var(--primary);
-            border-radius: var(--radius-lg);
-            padding: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            margin-top: 60px;
-            color: white;
-        }
-
-        .portal-info h3 { font-size: 2.2rem; margin-bottom: 20px; }
-        .portal-info p { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; }
-        .portal-btn {
-            background: white;
-            color: var(--primary);
-            padding: 16px 36px;
-            border-radius: 12px;
+        .doc-name {
+            font-size: 1.25rem;
             font-weight: 800;
-            text-decoration: none;
-            display: inline-block;
-            transition: var(--transition);
+            color: #ffffff;
+            margin-bottom: 10px;
+            line-height: 1.35;
         }
-        .portal-btn:hover { background: var(--accent); color: white; transform: translateY(-3px); }
 
-        /* Контакты */
-        .contact-wrap {
+        .doc-summary {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .doc-btns {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: var(--card);
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .btn-view-pdf {
+            background: #ffffff;
+            color: var(--bg-dark);
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-view-pdf:hover {
+            background: var(--primary-accent);
+            color: #ffffff;
+        }
+
+        .btn-down-pdf {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid var(--border-subtle);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-down-pdf:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Инфраструктура и локации */
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .infra-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
+            padding: 34px;
+            border-top: 4px solid var(--primary-accent);
+            transition: var(--transition);
+        }
+
+        .infra-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-active);
+        }
+
+        .infra-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin-bottom: 14px;
+        }
+
+        .infra-card h3 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .infra-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Преподаватели */
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 26px;
+        }
+
+        .inst-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .inst-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .inst-avatar-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .inst-initials {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            background: rgba(255, 85, 0, 0.15);
+            color: var(--primary-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            border: 1px solid rgba(255, 85, 0, 0.3);
+        }
+
+        .inst-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .inst-title {
+            font-size: 0.8rem;
+            color: var(--primary-accent);
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        .inst-docs-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .inst-docs-list li {
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .inst-docs-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--primary-accent);
+            font-weight: 900;
+            font-size: 1rem;
+        }
+
+        /* Контакты и форма */
+        .contact-section {
+            padding: 90px 0 110px;
+        }
+
+        .contact-deck {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 36px;
+        }
+
+        .form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 44px;
+            backdrop-filter: blur(20px);
+        }
+
+        .field-group {
+            margin-bottom: 20px;
+        }
+
+        .field-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .field-group input, .field-group select, .field-group textarea {
+            width: 100%;
+            background: rgba(7, 12, 22, 0.6);
+            border: 1px solid var(--border-subtle);
+            padding: 14px 18px;
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 0.98rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .field-group input:focus, .field-group select:focus, .field-group textarea:focus {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.15);
+        }
+
+        .contact-info-card {
+            background: linear-gradient(145deg, #0e1726 0%, #152238 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .c-block {
+            margin-bottom: 24px;
+        }
+
+        .c-block-tag {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            color: var(--primary-accent);
+            margin-bottom: 4px;
+        }
+
+        .c-block-val {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .c-block-val a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .c-block-val a:hover {
+            color: var(--primary-accent);
+        }
+
+        /* Футер */
+        footer {
+            background: #03060b;
+            padding: 45px 0 35px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 44px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Модальное окно PDF */
+        .pdf-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 6, 11, 0.9);
+            backdrop-filter: blur(14px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            padding: 24px;
+        }
+
+        .pdf-modal.active {
+            display: flex;
+        }
+
+        .modal-body-deck {
+            background: #0f172a;
+            width: 100%;
+            max-width: 980px;
+            height: 88vh;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
         }
 
-        .contact-form-area { padding: 60px; }
-        .contact-info-area {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 60px;
-            color: white;
+        .modal-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 26px;
+            background: #1e293b;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .form-group { margin-bottom: 24px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--primary); font-size: 0.95rem; }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 16px; border: 2px solid var(--bg); border-radius: 12px; background: var(--bg);
-            font-size: 1rem; transition: var(--transition); outline: none;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent); background: white;
+        .modal-top h4 {
+            font-size: 1.1rem;
+            color: #ffffff;
         }
 
-        .info-row { margin-bottom: 30px; }
-        .info-row span { display: block; color: var(--accent); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 8px; }
-        .info-row p, .info-row a { font-size: 1.1rem; color: white; font-weight: 600; text-decoration: none; }
-
-        /* Модальное окно */
-        .modal {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 13, 26, 0.85); backdrop-filter: blur(10px);
-            display: none; align-items: center; justify-content: center; z-index: 2000; padding: 20px;
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
         }
-        .modal.active { display: flex; animation: fadeInModal 0.3s forwards; }
-        @keyframes fadeInModal { from{opacity:0; transform:scale(0.95);} to{opacity:1; transform:scale(1);} }
-        .modal-content {
-            background: white; width: 100%; max-width: 900px; height: 85vh;
-            border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;
+
+        .close-btn:hover {
+            color: var(--primary-accent);
         }
-        .modal-header { padding: 20px 30px; background: var(--bg); display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); }
-        .modal-header h4 { font-size: 1.2rem; color: var(--primary); }
-        .close-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--muted); line-height: 1; }
-        .close-btn:hover { color: var(--accent); }
-        iframe { flex-grow: 1; border: none; background: #e2e8f0; }
 
-        footer { background: #000; color: white; padding: 40px 0; text-align: center; border-top: 4px solid var(--accent); }
+        .modal-frame {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #334155;
+        }
 
+        /* Адаптивность */
         @media (max-width: 992px) {
-            .hero-grid, .features-grid, .contact-wrap { grid-template-columns: 1fr; }
-            .hero { padding: 80px 0 100px; text-align: center; }
-            .hero-badge { margin: 0 auto 20px; }
-            .glass-card { transform: none; margin-top: 40px; }
-            .glass-card:hover { transform: translateY(-5px); }
-            .online-portal { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .hero-grid, .reaction-box, .contact-deck, .infra-grid {
+                grid-template-columns: 1fr;
+            }
+            .step-pane.active {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
         }
+
         @media (max-width: 768px) {
-            .nav-wrap { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
-            nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .hero h1 { font-size: 2.2rem; }
-            .section-title { font-size: 2rem; }
-            .contact-form-area, .contact-info-area { padding: 30px 20px; }
-            .quiz-section { padding: 40px 20px; }
+            .nav-wrap {
+                flex-direction: column;
+                height: auto;
+                padding: 16px 0;
+                gap: 16px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero-stats-deck {
+                grid-template-columns: 1fr;
+            }
+            .footer-wrap {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Шапка -->
     <header>
         <div class="container nav-wrap">
             <a href="#" class="logo-block">
-                <img src="logo.jpg" alt="Ре-Старт" class="logo-img">
+                <img src="logo.jpg" alt="Автошкола Ре-Старт" class="logo-img">
                 <div class="logo-text-group">
                     <span class="logo-name">Ре-Старт</span>
-                    <span class="logo-tag">Автошкола • ИП Щучка А.Г.</span>
+                    <span class="logo-tag">Автошкола • ИП Щучка А. Г.</span>
                 </div>
             </a>
             <nav>
-                <a href="#about">Преимущества</a>
+                <a href="#roadmap">Обучение</a>
                 <a href="#documents">Документы</a>
-                <a href="#program">Программа</a>
-                <a href="#price">Стоимость</a>
+                <a href="#base">Автодром</a>
+                <a href="#instructors">Преподаватели</a>
+                <a href="#contact">Контакты</a>
             </nav>
             <div class="header-actions">
-                <div class="price-badge-header">Всё включено: 55 000 ₽</div>
+                <div class="price-badge-nav">55 000 ₽</div>
                 <a href="#contact" class="btn-header">Записаться</a>
             </div>
         </div>
     </header>
 
+    <!-- Главный экран -->
     <section class="hero">
-        <div class="hero-video-bg"></div>
-        <div class="container hero-grid">
-            <div class="reveal active">
-                <div class="hero-badge">Официально согласовано с ОГИБДД «Ишимский»</div>
-                <h1>Обучение вождению <span>нового поколения</span></h1>
-                <p class="hero-sub">Автошкола «Ре-Старт» в с. Большое Сорокино. Инновационный подход к обучению категории «В». Собственный автодром 3 011 м², современные методики и полная прозрачность.</p>
-                <a href="#contact" class="btn-main">Начать обучение</a>
-            </div>
-            
-            <div class="glass-card reveal active" style="transition-delay: 0.2s;">
-                <div class="glass-price">55 000<span>₽</span></div>
-                <div class="glass-sub">Фиксированная стоимость курса</div>
-                <ul class="glass-list">
-                    <li><i>✓</i> 195 академических часов теории</li>
-                    <li><i>✓</i> 58 часов реального вождения</li>
-                    <li><i>✓</i> ГСМ и аренда автодрома включены</li>
-                    <li><i>✓</i> Подача авто на экзамен ГИБДД</li>
-                </ul>
-                <a href="#contact" class="btn-header" style="display: block; text-align: center; background: white; color: var(--primary);">Забронировать место</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ИНТЕРАКТИВНЫЙ КВИЗ -->
-    <section class="container reveal">
-        <div class="quiz-section" id="quiz-block">
-            <div id="q1" class="quiz-step active">
-                <div class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Интерактив</div>
-                <h2 class="quiz-question">Уже пробовали управлять автомобилем?</h2>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuiz('q2')">Да, есть базовые навыки</button>
-                    <button class="quiz-btn" onclick="nextQuiz('q2')">Нет, начну с нуля</button>
-                </div>
-            </div>
-            <div id="q2" class="quiz-step">
-                <div class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Шаг 2 из 3</div>
-                <h2 class="quiz-question">Что для вас самое важное в автошколе?</h2>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuiz('q3')">Спокойный инструктор</button>
-                    <button class="quiz-btn" onclick="nextQuiz('q3')">Удобное время занятий</button>
-                    <button class="quiz-btn" onclick="nextQuiz('q3')">Отсутствие скрытых доплат</button>
-                </div>
-            </div>
-            <div id="q3" class="quiz-step">
-                <div class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Шаг 3 из 3</div>
-                <h2 class="quiz-question">Готовы приступить к обучению в этом месяце?</h2>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="finishQuiz()">Да, хочу начать!</button>
-                    <button class="quiz-btn" onclick="finishQuiz()">Пока только узнаю цены</button>
-                </div>
-            </div>
-            <div id="q-result" class="quiz-step">
-                <h2 class="quiz-question" style="color: var(--accent);">Отлично! Вы готовы к Ре-Старту.</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 30px;">Наша программа (195 часов) идеально подойдет под ваши запросы. Цена фиксирована: 55 000 руб.</p>
-                <a href="#contact" class="btn-main" style="background: white; color: var(--primary);">Оставить заявку на зачисление</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- БАЗА И ОБУЧЕНИЕ -->
-    <section id="about" class="section-padding" style="background: white;">
-        <div class="container reveal">
-            <div class="section-header">
-                <span class="section-tag">Инфраструктура</span>
-                <h2 class="section-title">Современная учебная база</h2>
-                <p>Оснащение полностью соответствует ФЗ №196 «О безопасности дорожного движения».</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="f-num">01</div>
-                    <h3>Теоретический класс</h3>
-                    <p>Аудитория 49,7 м² на ул. Ленина, д. 28. Оснащена мультимедийным оборудованием и профессиональными тренажерами-манекенами для СЛР.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="f-num">02</div>
-                    <h3>Собственный автодром</h3>
-                    <p>Площадка 3011 м² (ул. Советская, 245 Б) с ровным асфальтобетонным покрытием, эстакадой (уклон 8-16%) и уличным освещением.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="f-num">03</div>
-                    <h3>Учебный автопарк</h3>
-                    <p>Специализированная LADA KALINA (А665РТ172) с сертифицированными дублирующими педалями, механической КПП и идеальным техническим состоянием.</p>
-                </div>
-            </div>
-
-            <!-- ИННОВАЦИОННАЯ ТЕОРИЯ (БЕЗ СТОРОННИХ ССЫЛОК) -->
-            <div class="online-portal reveal">
-                <div class="portal-info">
-                    <h3>Система дистанционной подготовки</h3>
-                    <p>Современный личный кабинет курсанта: изучайте ПДД со смартфона в любое время. Интерактивные видеолекции, 3D-моделирование перекрёстков и официальные билеты ГИБДД без установки сторонних приложений.</p>
-                    <a href="#contact" class="portal-btn">Узнать подробнее</a>
-                </div>
-                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80" alt="Online Edu" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); max-width: 100%; height: auto; display: none;"> <!-- Опциональное фото, скрыто для минимализма на мобильных, можно включить CSS media -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ДОКУМЕНТЫ -->
-    <section id="documents" class="section-padding">
-        <div class="container reveal">
-            <div class="section-header">
-                <span class="section-tag">Прозрачность 100%</span>
-                <h2 class="section-title">Официальные документы</h2>
-                <p>Все программы и акты согласованы с профильными ведомствами.</p>
-            </div>
-            <div class="docs-grid">
-                <div class="doc-card" style="border: 2px solid var(--accent);">
-                    <div class="doc-icon">🛡️</div>
-                    <h3>Образовательная программа</h3>
-                    <p>Основная программа (195ч). Согласована с ОГИБДД МО МВД России «Ишимский» 15.09.2026 г.</p>
-                    <div class="doc-actions">
-                        <button class="btn-doc btn-doc-view" onclick="openPdf('7a5f8af06278fc29d0402e7c937c20ea.pdf', 'Программа категории B')">Смотреть</button>
-                        <a href="7a5f8af06278fc29d0402e7c937c20ea.pdf" download class="btn-doc btn-doc-dl">Скачать</a>
-                    </div>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">📋</div>
-                    <h3>Акт обследования №1</h3>
-                    <p>Официальное заключение от 12.10.2026 г. о соответствии учебно-материальной базы нормам ФЗ.</p>
-                    <div class="doc-actions">
-                        <button class="btn-doc btn-doc-view" onclick="openPdf('e24e7bcd0386ac959c5a7b9c269b83a5.pdf', 'Акт обследования №1')">Смотреть</button>
-                        <a href="e24e7bcd0386ac959c5a7b9c269b83a5.pdf" download class="btn-doc btn-doc-dl">Скачать</a>
-                    </div>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">📊</div>
-                    <h3>Акт самообследования</h3>
-                    <p>Ежегодный официальный отчет о результатах самообследования ИП Щучка А. Г. (2026 год).</p>
-                    <div class="doc-actions">
-                        <button class="btn-doc btn-doc-view" onclick="openPdf('Akt_samoobsledovania_2026_Sorokino.pdf', 'Акт самообследования')">Смотреть</button>
-                        <a href="Akt_samoobsledovania_2026_Sorokino.pdf" download class="btn-doc btn-doc-dl">Скачать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- КОНТАКТЫ И ФОРМА -->
-    <section id="contact" class="section-padding" style="background: white;">
-        <div class="container reveal">
-            <div class="section-header">
-                <span class="section-tag">Старт обучения</span>
-                <h2 class="section-title">Оставьте заявку</h2>
-            </div>
-            
-            <div class="contact-wrap">
-                <div class="contact-form-area">
-                    <form id="leadForm">
-                        <input type="hidden" name="access_key" value="c1634d1f-f2e6-462e-a952-29b9d3cb3cec">
-                        
-                        <div class="form-group">
-                            <label>Ваше имя</label>
-                            <input type="text" name="Имя" required placeholder="Введите имя">
-                        </div>
-                        <div class="form-group">
-                            <label>Номер телефона</label>
-                            <input type="tel" name="Телефон" required placeholder="+7 (___) ___-__-__">
-                        </div>
-                        <div class="form-group">
-                            <label>Тариф</label>
-                            <select name="Тариф">
-                                <option>Категория B — 55 000 руб (Всё включено)</option>
-                                <option>Переподготовка / Восстановление навыков</option>
-                            </select>
-                        </div>
-                        <button type="submit" id="submitBtn" class="btn-main" style="width: 100%;">Записаться в автошколу</button>
-                        <div id="formStatus" style="margin-top: 15px; font-weight: 700; text-align: center;"></div>
-                    </form>
-                </div>
-                
-                <div class="contact-info-area">
-                    <h3>Контакты</h3>
-                    <div class="info-row">
-                        <span>Учебный класс</span>
-                        <p>с. Большое Сорокино, ул. Ленина, д. 28 (2 этаж)</p>
-                    </div>
-                    <div class="info-row">
-                        <span>Автодром</span>
-                        <p>с. Большое Сорокино, ул. Советская, д. 245 Б</p>
-                    </div>
-                    <div class="info-row">
-                        <span>Email</span>
-                        <a href="mailto:a.shchuchka@mail.ru">a.shchuchka@mail.ru</a>
-                    </div>
-                    <div class="info-row">
-                        <span>Юридическая информация</span>
-                        <p style="font-size: 0.9rem; font-weight: 400; opacity: 0.8;">ИП Щучка Алексей Григорьевич<br>ОГРНИП 3267232000041412<br>ИНН 720801856980</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
         <div class="container">
-            <img src="logo.jpg" alt="Логотип" style="height: 40px; border-radius: 6px; margin-bottom: 20px;">
-            <p>© 2026 ИП Щучка А. Г. Автошкола «Ре-Старт». Все права защищены.</p>
-        </div>
-    </footer>
+            <div class="hero-grid">
+                <div>
+                    <div class="pill-badge">
+                        <span class="pill-dot"></span>
+                        Программа согласована с ОГИБДД «Ишимский» (15.09.2026 г.)
+                    </div>
+                    <h1>Новый стандарт подготовки водителей: <span>Ре-Старт</span></h1>
+                    <p class="hero-desc">Официальная автошкола категории «B» в с. Большое Сорокино. Просторный сертифицированный автодром, современный цифровой класс и полная финансовая прозрачность.</p>
 
-    <!-- Модальное окно PDF -->
-    <div id="pdfModal" class="modal" onclick="closePdf(event)">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h4 id="pdfTitle">Документ</h4>
-                <button class="close-btn" onclick="closePdf()">&times;</button>
+                    <div class="hero-stats-deck">
+                        <div class="h-stat">
+                            <div class="h-stat-num">195<span>ч</span></div>
+                            <div class="h-stat-label">Полный курс теории</div>
+                        </div>
+                        <div class="h-stat">
+                            <div class="h-stat-num">58<span>ч</span></div>
+                            <div class="h-stat-label">Практика вождения</div>
+                        </div>
+                        <div class="h-stat">
+                            <div class="h-stat-num">3 011<span>м²</span></div>
+                            <div class="h-stat-label">Площадь автодрома</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn-glow">Записаться на курс</a>
+                        <a href="#documents" class="btn-glass">Официальные акты ↗</a>
+                    </div>
+                </div>
+
+                <!-- Карточка тарифа -->
+                <div class="hero-tariff-card">
+                    <span class="tariff-tag">Категория «B» • Всё включено</span>
+                    <div class="tariff-sum">55 000 <span>₽</span></div>
+                    <div class="tariff-policy">Единый фиксированный платёж. Без скрытых доплат за бензин, автодром или зачёты.</div>
+
+                    <ul class="tariff-features">
+                        <li><span class="chk">✓</span> Полный теоретический курс (очно + онлайн-доступ)</li>
+                        <li><span class="chk">✓</span> 58 часов реального вождения на МКПП с инструктором</li>
+                        <li><span class="chk">✓</span> Горюче-смазочные материалы (бензин) включены</li>
+                        <li><span class="chk">✓</span> Отработка первой помощи на сертифицированных манекенах</li>
+                        <li><span class="chk">✓</span> Организованная подача учебного авто на экзамен ГИБДД</li>
+                    </ul>
+
+                    <a href="#contact" class="btn-glow" style="width: 100%; justify-content: center;">Забронировать место</a>
+                </div>
             </div>
-            <iframe id="pdfFrame" src=""></iframe>
+        </div>
+    </section>
+
+    <!-- Интерактивный симулятор реакции -->
+    <div class="container reaction-section">
+        <div class="reaction-box">
+            <div class="reaction-desc">
+                <span class="sec-tag">Интерактивный тест</span>
+                <h3>Проверьте скорость реакции водителя</h3>
+                <p>Безопасность за рулём напрямую зависит от внимательности. Нажмите на блок справа, дождитесь, пока красный свет сменится на зелёный, и кликните как можно быстрее!</p>
+            </div>
+            <div class="reaction-game" id="reactionGame" onclick="handleReactionClick()">
+                <div class="reaction-signal" id="reactSignal"></div>
+                <div class="reaction-state-text" id="reactText">Нажмите для старта теста</div>
+                <div class="reaction-hint" id="reactHint">Ждите зелёного сигнала светофора</div>
+            </div>
         </div>
     </div>
 
+    <!-- Интерактивная карта пути курсанта -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-tag">Пошаговая методика</span>
+                <h2 class="sec-title">5 этапов до водительского удостоверения</h2>
+                <p class="sec-desc">Программа обучения выстроена так, чтобы курсант чувствовал уверенность на каждом этапе подготовки.</p>
+            </div>
+
+            <div class="steps-nav">
+                <button class="step-btn active" onclick="switchStep(0)">1. Оформление</button>
+                <button class="step-btn" onclick="switchStep(1)">2. Цифровая теория</button>
+                <button class="step-btn" onclick="switchStep(2)">3. Автодром 3 011 м²</button>
+                <button class="step-btn" onclick="switchStep(3)">4. Городские маршруты</button>
+                <button class="step-btn" onclick="switchStep(4)">5. Экзамен ГИБДД</button>
+            </div>
+
+            <!-- Шаг 1 -->
+            <div class="step-pane active" id="pane-0">
+                <div class="step-content">
+                    <h3>Быстрое заключение прозрачного договора</h3>
+                    <p>Для зачисления потребуется паспорт, СНИЛС и медицинская справка по форме 003-В/у. Стоимость 55 000 ₽ фиксируется в договоре и гарантирует отсутствие любых непредвиденных сборов.</p>
+                    <div class="step-specs">
+                        <div class="step-spec-box"><div class="spec-val">100%</div><div class="spec-lbl">Прозрачность договора</div></div>
+                        <div class="step-spec-box"><div class="spec-val">с 16 лет</div><div class="spec-lbl">Доступно для курсантов</div></div>
+                    </div>
+                </div>
+                <div><div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">📄 Лицензированная организация ИП Щучка А. Г. Ведение групп по официальным приказам.</div></div>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="step-pane" id="pane-1">
+                <div class="step-content">
+                    <h3>Интерактивная теория и отработка медицины</h3>
+                    <p>Занятия в оборудованном классе на ул. Ленина, 28 и круглосуточный доступ к материалам курса со смартфона. Отработка сердечно-легочной реанимации на специальных манекенах.</p>
+                    <div class="step-specs">
+                        <div class="step-spec-box"><div class="spec-val">195 ч</div><div class="spec-lbl">Академический объём</div></div>
+                        <div class="step-spec-box"><div class="spec-val">24 / 7</div><div class="spec-lbl">Доступ к лекциям</div></div>
+                    </div>
+                </div>
+                <div><div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">🧠 Полный разбор всех экзаменационных билетов и ситуационных задач.</div></div>
+            </div>
+
+            <!-- Шаг 3 -->
+            <div class="step-pane" id="pane-2">
+                <div class="step-content">
+                    <h3>Первоначальные навыки на собственном автодроме</h3>
+                    <p>Отработка упражнений на закрытой площадке 3 011 кв.м (ул. Советская, 245 Б): эстакада с уклоном 8–16%, змейка, заезд в бокс и параллельная парковка задним ходом в комфортной обстановке.</p>
+                    <div class="step-specs">
+                        <div class="step-spec-box"><div class="spec-val">3 011 м²</div><div class="spec-lbl">Твердое покрытие</div></div>
+                        <div class="step-spec-box"><div class="spec-val">Эстакада</div><div class="spec-lbl">Уклон 8-16%</div></div>
+                    </div>
+                </div>
+                <div><div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">🚗 Учебный универсал LADA KALINA (А665РТ172) с сертифицированными дублирующими педалями.</div></div>
+            </div>
+
+            <!-- Шаг 4 -->
+            <div class="step-pane" id="pane-3">
+                <div class="step-content">
+                    <h3>Уверенное вождение в реальных дорожных условиях</h3>
+                    <p>Практика проезда регулируемых и нерегулируемых перекрестков, круговых развязок, пешеходных переходов и безопасного обгона под спокойным руководством опытного инструктора.</p>
+                    <div class="step-specs">
+                        <div class="step-spec-box"><div class="spec-val">58 часов</div><div class="spec-lbl">Практика вождения</div></div>
+                        <div class="step-spec-box"><div class="spec-val">0 ₽</div><div class="spec-lbl">Доплата за бензин</div></div>
+                    </div>
+                </div>
+                <div><div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">🚦 Формирование профессиональной надежности и хладнокровия за рулём.</div></div>
+            </div>
+
+            <!-- Шаг 5 -->
+            <div class="step-pane" id="pane-4">
+                <div class="step-content">
+                    <h3>Организованная сдача квалификационных экзаменов</h3>
+                    <p>Проведение внутреннего зачета и полное сопровождение учебной группы на экзаменах в Государственной инспекции безопасности дорожного движения.</p>
+                    <div class="step-specs">
+                        <div class="step-spec-box"><div class="spec-val">Свидетельство</div><div class="spec-lbl">Государственный образец</div></div>
+                        <div class="step-spec-box"><div class="spec-val">ГИБДД</div><div class="spec-lbl">Подача учебного авто</div></div>
+                    </div>
+                </div>
+                <div><div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 30px; border-radius: var(--radius-md);">🏆 Выпуск готового к самостоятельным поездкам уверенного водителя.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Центр официальных документов (PDF) -->
+    <section id="documents" class="docs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-tag">Документы и согласования</span>
+                <h2 class="sec-title">Нормативно-правовая база</h2>
+                <p class="sec-desc">Оригинальные документы в формате PDF доступны для онлайн-просмотра прямо на сайте и скачивания.</p>
+            </div>
+
+            <div class="docs-grid">
+                <!-- Программа ОГИБДД -->
+                <div class="doc-card primary-doc">
+                    <span class="doc-chip">ОГИБДД «Ишимский»</span>
+                    <div class="doc-icon">📘</div>
+                    <h3 class="doc-name">Образовательная программа категории «В»</h3>
+                    <p class="doc-summary">Утверждённая программа профессиональной подготовки (195 часов). Согласована Врио Начальника ОГИБДД МО МВД России «Ишимский» Андреевым А.Ф. от 15.09.2026 г.</p>
+                    <div class="doc-btns">
+                        <button class="btn-view-pdf" onclick="showPdfModal('7a5f8af06278fc29d0402e7c937c20ea.pdf', 'Основная образовательная программа (Категория B)')">Смотреть</button>
+                        <a href="7a5f8af06278fc29d0402e7c937c20ea.pdf" download class="btn-down-pdf">Скачать</a>
+                    </div>
+                </div>
+
+                <!-- Акт № 1 -->
+                <div class="doc-card">
+                    <span class="doc-chip">Акт № 1 (2026 г.)</span>
+                    <div class="doc-icon">📋</div>
+                    <h3 class="doc-name">Акт обследования базы организации</h3>
+                    <p class="doc-summary">Акт № 1 от 12.10.2026 г. Заключение о соответствии учебного кабинета (ул. Ленина, 28), автодрома 3 011 м² и автомобиля LADA KALINA нормам ст. 16 и 20 Федерального закона № 196-ФЗ.</p>
+                    <div class="doc-btns">
+                        <button class="btn-view-pdf" onclick="showPdfModal('e24e7bcd0386ac959c5a7b9c269b83a5.pdf', 'Акт обследования учебно-материальной базы № 1')">Смотреть</button>
+                        <a href="e24e7bcd0386ac959c5a7b9c269b83a5.pdf" download class="btn-down-pdf">Скачать</a>
+                    </div>
+                </div>
+
+                <!-- Самообследование -->
+                <div class="doc-card">
+                    <span class="doc-chip">Самообследование</span>
+                    <div class="doc-icon">📑</div>
+                    <h3 class="doc-name">Акт самообследования автошколы</h3>
+                    <p class="doc-summary">Официальный ежегодный отчёт о результатах самообследования образовательной деятельности ИП Щучка Алексей Григорьевич в с. Большое Сорокино.</p>
+                    <div class="doc-btns">
+                        <button class="btn-view-pdf" onclick="showPdfModal('Akt_samoobsledovania_2026_Sorokino.pdf', 'Акт самообследования 2026')">Смотреть</button>
+                        <a href="Akt_samoobsledovania_2026_Sorokino.pdf" download class="btn-down-pdf">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Инфраструктура -->
+    <section id="base" class="roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-tag">Оборудование</span>
+                <h2 class="sec-title">Инфраструктура и транспорт</h2>
+                <p class="sec-desc">Всё необходимое для безопасного и результативного практического обучения.</p>
+            </div>
+
+            <div class="infra-grid">
+                <div class="infra-card">
+                    <span class="infra-badge">ул. Ленина, д. 28, 2 этаж</span>
+                    <h3>Учебный кабинет (49,7 м²)</h3>
+                    <p>Просторная аудитория на 10 посадочных мест. Оборудована компьютером, мультимедийным экраном, наглядными пособиями по ПДД и тренажерами-манекенами для отработки сердечно-легочной реанимации.</p>
+                </div>
+
+                <div class="infra-card">
+                    <span class="infra-badge">ул. Советская, д. 245 Б</span>
+                    <h3>Закрытый автодром (3 011 м²)</h3>
+                    <p>Асфальтобетонная площадка с ограждением по периметру, разметочными конусами, сертифицированной эстакадой (уклон 8–16%) и уличным светодиодным освещением (договор аренды до 2031 г.).</p>
+                </div>
+
+                <div class="infra-card">
+                    <span class="infra-badge">Госномер: А665РТ172</span>
+                    <h3>LADA KALINA (Универсал)</h3>
+                    <p>Учебный автомобиль с механической КПП. Оборудован дублирующими педалями тормоза и сцепления, дополнительными зеркалами заднего вида, тягово-сцепным устройством и прицепом. Техосмотр до 04.02.2027 г.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преподаватели -->
+    <section id="instructors" class="roadmap-section" style="background: rgba(14, 23, 38, 0.4); border-top: 1px solid var(--border-subtle);">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-tag">Наставники</span>
+                <h2 class="sec-title">Педагогический состав</h2>
+                <p class="sec-desc">Опытные инструкторы и преподаватели с высшим педагогическим и профильным образованием.</p>
+            </div>
+
+            <div class="instructors-grid">
+                <div class="inst-card">
+                    <div class="inst-avatar-box">
+                        <div class="inst-initials">ЩА</div>
+                        <div>
+                            <div class="inst-name">Щучка Алексей Григорьевич</div>
+                            <div class="inst-title">Руководитель, Мастер ПО, Преподаватель ПДД</div>
+                        </div>
+                    </div>
+                    <ul class="inst-docs-list">
+                        <li>ИГПИ им. П. П. Ершова (педагог профобучения).</li>
+                        <li>АНО ДПО «Гуманитарно-технический институт» (мастер производственного обучения вождению).</li>
+                        <li>Водительские категории: B, B1, C, C1, CE, C1E, M.</li>
+                    </ul>
+                </div>
+
+                <div class="inst-card">
+                    <div class="inst-avatar-box">
+                        <div class="inst-initials">ЛМ</div>
+                        <div>
+                            <div class="inst-name">Лумпова Марина Владимировна</div>
+                            <div class="inst-title">Преподаватель первой помощи и психологии</div>
+                        </div>
+                    </div>
+                    <ul class="inst-docs-list">
+                        <li>ИГПИ им. П. П. Ершова (учитель географии и биологии).</li>
+                        <li>Ишимский медицинский колледж (квалификация «Медицинская сестра», Сестринское дело).</li>
+                        <li>Практическая подготовка к действиям в экстренных ситуациях на дороге.</li>
+                    </ul>
+                </div>
+
+                <div class="inst-card">
+                    <div class="inst-avatar-box">
+                        <div class="inst-initials">ША</div>
+                        <div>
+                            <div class="inst-name">Шуляк Александр Васильевич</div>
+                            <div class="inst-title">Преподаватель устройства ТС и перевозок</div>
+                        </div>
+                    </div>
+                    <ul class="inst-docs-list">
+                        <li>Тюменский государственный университет (бакалавр «Агроинженерия»).</li>
+                        <li>Ишимский многопрофильный техникум (слесарь по ремонту ТС, водитель кат. B, C).</li>
+                        <li>Тобольское училище искусств и культуры им. А. А. Алябьева.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Запись и контакты -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sec-tag">Прямая связь</span>
+                <h2 class="sec-title">Запись на обучение</h2>
+                <p class="sec-desc">Оставьте свои контактные данные, и мы свяжемся с вами для консультации и бронирования места в ближайшей группе.</p>
+            </div>
+
+            <div class="contact-deck">
+                <!-- Форма Web3Forms -->
+                <div class="form-card">
+                    <form id="enrollForm">
+                        <input type="hidden" name="access_key" value="c1634d1f-f2e6-462e-a952-29b9d3cb3cec">
+                        <input type="hidden" name="subject" value="Заявка с сайта Автошколы Ре-Старт">
+                        <input type="hidden" name="from_name" value="Автошкола Ре-Старт">
+
+                        <div class="field-group">
+                            <label for="userName">Ваше имя *</label>
+                            <input type="text" id="userName" name="Имя" required placeholder="Иван Иванов">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="userPhone">Номер телефона *</label>
+                            <input type="tel" id="userPhone" name="Телефон" required placeholder="+7 (___) ___-__-__">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="userCourse">Выбранная программа</label>
+                            <select id="userCourse" name="Курс">
+                                <option value="Категория B — 55 000 руб (Всё включено)">Категория «B» — 55 000 ₽ (Всё включено)</option>
+                                <option value="Восстановление навыков вождения">Восстановление навыков вождения</option>
+                                <option value="Консультация по поступлению">Консультация по документам</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="userMsg">Вопрос или комментарий</label>
+                            <textarea id="userMsg" name="Сообщение" rows="3" placeholder="Укажите, когда вам удобно принять звонок..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-glow" style="width: 100%; justify-content: center;">
+                            Отправить заявку
+                        </button>
+                        <div id="formStatusMsg" style="margin-top: 16px; font-weight: 700; text-align: center; font-size: 0.95rem;"></div>
+                    </form>
+                </div>
+
+                <!-- Контакты и реквизиты -->
+                <div class="contact-info-card">
+                    <div>
+                        <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 24px;">Контактная информация</h3>
+
+                        <div class="c-block">
+                            <div class="c-block-tag">Учебный класс</div>
+                            <div class="c-block-val">с. Большое Сорокино, ул. Ленина, д. 28 (2 этаж)</div>
+                        </div>
+
+                        <div class="c-block">
+                            <div class="c-block-tag">Закрытый автодром</div>
+                            <div class="c-block-val">с. Большое Сорокино, ул. Советская, д. 245 Б</div>
+                        </div>
+
+                        <div class="c-block">
+                            <div class="c-block-tag">Электронная почта</div>
+                            <div class="c-block-val"><a href="mailto:a.shchuchka@mail.ru">a.shchuchka@mail.ru</a></div>
+                        </div>
+
+                        <div class="c-block">
+                            <div class="c-block-tag">Режим работы</div>
+                            <div class="c-block-val">Пн — Пт: с 09:00 до 18:00</div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid var(--border-subtle); padding-top: 20px; font-size: 0.85rem; color: #64748b;">
+                        ИП Щучка Алексей Григорьевич<br>
+                        ОГРНИП: 3267232000041412 • ИНН: 720801856980<br>
+                        ОКВЭД 85.42.1 (Обучение водителей автотранспортных средств)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container footer-wrap">
+            <div>
+                <img src="logo.jpg" alt="Ре-Старт" class="footer-logo">
+                <div class="footer-legal">
+                    © 2026 Автошкола «Ре-Старт». ИП Щучка Алексей Григорьевич.<br>
+                    Тюменская область, Сорокинский район, с. Большое Сорокино.
+                </div>
+            </div>
+            <div>
+                <a href="#documents" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 700;">Реестр документов ↗</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно просмотра документов (PDF) -->
+    <div id="pdfModalDeck" class="pdf-modal" onclick="hidePdfModal(event)">
+        <div class="modal-body-deck" onclick="event.stopPropagation()">
+            <div class="modal-top">
+                <h4 id="pdfHeading">Просмотр документа</h4>
+                <button class="close-btn" onclick="hidePdfModal()">&times;</button>
+            </div>
+            <iframe id="pdfFrameWindow" class="modal-frame" src=""></iframe>
+        </div>
+    </div>
+
+    <!-- Интерактивные скрипты -->
     <script>
-        // Скрипт для интерактивного квиза
-        function nextQuiz(id) {
-            document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-        function finishQuiz() {
-            document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
-            document.getElementById('q-result').classList.add('active');
-        }
-
-        // Анимации при скролле (Intersection Observer)
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+        // Интерактивный переключатель шагов (Roadmap)
+        function switchStep(index) {
+            document.querySelectorAll('.step-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
             });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+            document.querySelectorAll('.step-pane').forEach((pane, i) => {
+                pane.classList.toggle('active', i === index);
+            });
+        }
 
-        // Модальное окно PDF
-        function openPdf(url, title) {
-            document.getElementById('pdfTitle').innerText = title;
-            document.getElementById('pdfFrame').src = url;
-            document.getElementById('pdfModal').classList.add('active');
+        // Интерактивный замер реакции водителя
+        let reactionTimer = null;
+        let reactionStartTime = 0;
+        let reactionWaiting = false;
+
+        function handleReactionClick() {
+            const signal = document.getElementById('reactSignal');
+            const text = document.getElementById('reactText');
+            const hint = document.getElementById('reactHint');
+
+            if (!reactionWaiting && reactionStartTime === 0) {
+                // Старт
+                reactionWaiting = true;
+                signal.classList.remove('green');
+                text.innerText = 'Внимание... Ждите зелёный!';
+                hint.innerText = 'Не нажимайте раньше времени';
+
+                const delay = Math.floor(Math.random() * 2500) + 1500;
+                reactionTimer = setTimeout(() => {
+                    signal.classList.add('green');
+                    reactionStartTime = Date.now();
+                    text.innerText = 'ЖМИТЕ СЕЙЧАС!';
+                    hint.innerText = 'Кликните по блоку!';
+                    reactionWaiting = false;
+                }, delay);
+            } else if (reactionWaiting) {
+                // Фальстарт
+                clearTimeout(reactionTimer);
+                reactionWaiting = false;
+                reactionStartTime = 0;
+                signal.classList.remove('green');
+                text.innerText = 'Фальстарт!';
+                hint.innerText = 'Вы нажали до зелёного сигнала. Кликните, чтобы попробовать снова.';
+            } else if (reactionStartTime > 0) {
+                // Успешный клик
+                const score = Date.now() - reactionStartTime;
+                reactionStartTime = 0;
+                signal.classList.remove('green');
+                text.innerText = score + ' мс!';
+                if (score < 250) {
+                    hint.innerText = 'Феноменальная реакция! Отличный потенциал для водителя.';
+                } else if (score < 350) {
+                    hint.innerText = 'Отличная скорость реакции для управления автомобилем!';
+                } else {
+                    hint.innerText = 'Хороший результат. Регулярные тренировки улучшат внимание.';
+                }
+            }
+        }
+
+        // Модальное окно для PDF документов
+        function showPdfModal(pdfFile, title) {
+            document.getElementById('pdfHeading').innerText = title;
+            document.getElementById('pdfFrameWindow').src = pdfFile;
+            document.getElementById('pdfModalDeck').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        function closePdf(e) {
-            document.getElementById('pdfModal').classList.remove('active');
-            document.getElementById('pdfFrame').src = '';
+
+        function hidePdfModal(e) {
+            document.getElementById('pdfModalDeck').classList.remove('active');
+           document.getElementById('pdfFrameWindow').src = '';
             document.body.style.overflow = 'auto';
         }
 
-        // Обработка формы
-        const form = document.getElementById('leadForm');
-        const formStatus = document.getElementById('formStatus');
+        // AJAX-отправка заявки через Web3Forms без перезагрузки
+        const form = document.getElementById('enrollForm');
+        const formStatus = document.getElementById('formStatusMsg');
         const submitBtn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Отправка...';
-            
+            submitBtn.innerText = 'Отправка заявки...';
+            formStatus.innerHTML = '';
+
             const formData = new FormData(form);
             const json = JSON.stringify(Object.fromEntries(formData));
 
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
                 body: json
             })
             .then(async (response) => {
+                const res = await response.json();
                 if (response.status === 200) {
                     formStatus.style.color = 'var(--success)';
-                    formStatus.innerHTML = 'Заявка отправлена! Мы скоро свяжемся с вами.';
+                    formStatus.innerHTML = '✓ Заявка успешно принята! Мы перезвоним вам в ближайшее время.';
                     form.reset();
                 } else {
-                    formStatus.style.color = 'var(--accent)';
-                    formStatus.innerHTML = 'Ошибка отправки.';
+                    formStatus.style.color = '#ef4444';
+                    formStatus.innerHTML = res.message || 'Ошибка при отправке заявки.';
                 }
             })
             .catch(() => {
-                formStatus.style.color = 'var(--accent)';
-                formStatus.innerHTML = 'Ошибка сети. Напишите нам на email.';
+                formStatus.style.color = '#ef4444';
+                formStatus.innerHTML = 'Не удалось отправить. Напишите нам напрямую: a.shchuchka@mail.ru';
             })
             .finally(() => {
                 submitBtn.disabled = false;
-                submitBtn.innerText = 'Записаться в автошколу';
+                submitBtn.innerText = 'Отправить заявку';
             });
         });
     </script>
